@@ -9,6 +9,10 @@ public class Complex {
 
 	private final double re, im;
 
+	public Complex(org.jscience.mathematics.number.Complex z) {
+		this(z.getReal(), z.getImaginary());
+	}
+
 	public Complex(double re) {
 		this(re, 0);
 	}
@@ -106,6 +110,14 @@ public class Complex {
 		return new Complex(Math.log(z.abs()), z.arg());
 	}
 
+	public Complex pow(Complex exponent) {
+		return exp(exponent.multiply(log()));
+	}
+
+	public static Complex pow(Complex base, Complex exponent) {
+		return exp(exponent.multiply(log(base)));
+	}
+
 	public Complex sin() {
 		return sin(this);
 	}
@@ -130,6 +142,10 @@ public class Complex {
 		double x = z.re(), y = z.im();
 		return new Complex(Math.cos(x) * Math.cosh(y), -Math.sin(x)
 				* Math.sinh(y));
+	}
+
+	public org.jscience.mathematics.number.Complex toJSComplex() {
+		return org.jscience.mathematics.number.Complex.valueOf(re, im);
 	}
 
 	@Override
@@ -157,5 +173,4 @@ public class Complex {
 		Complex exp = exp(z.multiply(PI));
 		System.out.println("Result: " + exp);
 	}
-
 }
