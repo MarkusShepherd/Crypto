@@ -1,4 +1,4 @@
-package info.schepke.math.complex;
+package info.riemannhypothesis.math.complex;
 
 public class Complex {
 

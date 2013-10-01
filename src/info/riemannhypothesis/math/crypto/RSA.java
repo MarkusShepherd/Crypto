@@ -1,4 +1,4 @@
-package info.schepke.math.crypto;
+package info.riemannhypothesis.math.crypto;
 
 //import info.schepke.MyBigInteger;
 

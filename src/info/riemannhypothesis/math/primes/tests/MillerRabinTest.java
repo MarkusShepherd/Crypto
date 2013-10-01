@@ -1,9 +1,9 @@
 /**
  * 
  */
-package info.schepke.math.primes.tests;
+package info.riemannhypothesis.math.primes.tests;
 
-import info.schepke.math.MyBigInteger;
+import info.riemannhypothesis.math.MyBigInteger;
 
 import java.math.BigInteger;
 import java.util.Random;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package info.schepke.math;
+package info.riemannhypothesis.math;
 
 import java.math.BigInteger;
 import java.util.Random;

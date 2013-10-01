@@ -1,6 +1,6 @@
-package info.schepke.math.primes;
+package info.riemannhypothesis.math.primes;
 
-import info.schepke.math.MyBigInteger;
+import info.riemannhypothesis.math.MyBigInteger;
 
 import java.math.BigInteger;
 

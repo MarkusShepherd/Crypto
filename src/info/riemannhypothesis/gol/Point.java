@@ -1,4 +1,4 @@
-package info.schepke.gol;
+package info.riemannhypothesis.gol;
 
 public class Point {
 	public int x, y;

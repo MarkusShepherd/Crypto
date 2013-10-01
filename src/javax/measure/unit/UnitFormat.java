@@ -293,9 +293,9 @@ public abstract class UnitFormat extends Format {
         static boolean isUnitIdentifierPart(char ch) {
             return Character.isLetter(ch) || 
                (!Character.isWhitespace(ch) && !Character.isDigit(ch)
-                  && (ch != 'Â·') && (ch != '*') && (ch != '/')
+                  && (ch != '·') && (ch != '*') && (ch != '/')
                   && (ch != '(') && (ch != ')') && (ch != '[') && (ch != ']')    
-                  && (ch != 'Â¹') && (ch != 'Â²') && (ch != 'Â³') 
+                  && (ch != '¹') && (ch != '²') && (ch != '³') 
                   && (ch != '^') && (ch != '+') && (ch != '-'));
         }
         
@@ -315,7 +315,7 @@ public abstract class UnitFormat extends Format {
                 UnitConverter cvtr = tfmUnit.toStandardUnit();
                 StringBuffer result = new StringBuffer();
                 String baseUnitName = baseUnits.toString();
-                if ((baseUnitName.indexOf('Â·') >= 0) ||
+                if ((baseUnitName.indexOf('·') >= 0) ||
                     (baseUnitName.indexOf('*') >= 0) ||
                     (baseUnitName.indexOf('/') >= 0)) {
                     // We could use parentheses whenever baseUnits is an
@@ -492,7 +492,7 @@ public abstract class UnitFormat extends Format {
                     return OPEN_PAREN;
                 } else if (c == ')') {
                     return CLOSE_PAREN;
-                } else if ((c == '^') || (c == 'Â¹') || (c == 'Â²') || (c == 'Â³')) {
+                } else if ((c == '^') || (c == '¹') || (c == '²') || (c == '³')) {
                     return EXPONENT;
                 } else if (c == '*') {
                     char c2 = csq.charAt(pos.getIndex() + 1);
@@ -501,7 +501,7 @@ public abstract class UnitFormat extends Format {
                     } else {
                         return MULTIPLY;
                     }
-                } else if (c == 'Â·') {
+                } else if (c == '·') {
                     return MULTIPLY;
                 } else if (c == '/') {
                     return DIVIDE;
@@ -546,19 +546,19 @@ public abstract class UnitFormat extends Format {
             boolean isRoot = false;
             while (pos.getIndex() < length) {
                 c = csq.charAt(pos.getIndex());
-                if (c == 'Â¹') {
+                if (c == '¹') {
                     if (isRoot) {
                         root = root * 10 + 1;
                     } else {
                         pow = pow * 10 + 1;
                     }
-                } else if (c == 'Â²') {
+                } else if (c == '²') {
                     if (isRoot) {
                         root = root * 10 + 2;
                     } else {
                         pow = pow * 10 + 2;
                     }
-                } else if (c == 'Â³') {
+                } else if (c == '³') {
                     if (isRoot) {
                         root = root * 10 + 3;
                     } else {
@@ -652,7 +652,7 @@ public abstract class UnitFormat extends Format {
                 int pow = productUnit.getUnitPow(i);
                 if (pow >= 0) {
                     if (!start) {
-                        appendable.append('Â·'); // Separator.
+                        appendable.append('·'); // Separator.
                     }
                     name = nameFor(productUnit.getUnit(i));
                     int root = productUnit.getUnitRoot(i);
@@ -679,7 +679,7 @@ public abstract class UnitFormat extends Format {
                         name = nameFor(productUnit.getUnit(i));
                         int root = productUnit.getUnitRoot(i);
                         if (!start) {
-                            appendable.append('Â·'); // Separator.
+                            appendable.append('·'); // Separator.
                         }
                         append(appendable, name, -pow, root);
                         start = false;
@@ -698,9 +698,9 @@ public abstract class UnitFormat extends Format {
             if ((pow != 1) || (root != 1)) {
                 // Write exponent.
                 if ((pow == 2) && (root == 1)) {
-                    appendable.append('Â²'); // Square
+                    appendable.append('²'); // Square
                 } else if ((pow == 3) && (root == 1)) {
-                    appendable.append('Â³'); // Cubic
+                    appendable.append('³'); // Cubic
                 } else {
                     // Use general exponent form.
                     appendable.append('^');

@@ -1,12 +1,12 @@
 /**
  * 
  */
-package info.schepke.math.primes.tests;
+package info.riemannhypothesis.math.primes.tests;
 
 import java.math.BigInteger;
 import java.util.Random;
 
-import info.schepke.math.MyBigInteger;
+import info.riemannhypothesis.math.MyBigInteger;
 
 /**
  * @author ms

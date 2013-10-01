@@ -1,4 +1,4 @@
-package info.schepke.gol;
+package info.riemannhypothesis.gol;
 
 import java.util.ArrayList;
 import java.util.List;
