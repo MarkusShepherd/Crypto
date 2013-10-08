@@ -39,7 +39,7 @@ public class Complex {
 	}
 
 	public double arg() {
-		return Math.atan2(re, im);
+		return Math.atan2(im, re);
 	}
 
 	public Complex negate() {
@@ -169,8 +169,8 @@ public class Complex {
 	}
 
 	public static void main(String[] arg) {
-		Complex z = I.multiply(-0.034234);
-		Complex exp = exp(z.multiply(PI));
-		System.out.println("Result: " + exp);
+		//Complex z = I.multiply(-0.034234);
+		//Complex exp = exp(z.multiply(PI));
+		System.out.println("Result: " + I.pow(I));
 	}
 }
