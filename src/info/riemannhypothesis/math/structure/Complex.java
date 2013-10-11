@@ -1,6 +1,7 @@
-package info.riemannhypothesis.math.complex;
+package info.riemannhypothesis.math.structure;
 
-public class Complex {
+
+public class Complex implements Field<Complex> {
 
 	public final static Complex ZERO = new Complex(0, 0);
 	public final static Complex ONE = new Complex(1, 0);
@@ -42,6 +43,7 @@ public class Complex {
 		return Math.atan2(im, re);
 	}
 
+	@Override
 	public Complex negate() {
 		return new Complex(-re, -im);
 	}
@@ -54,6 +56,7 @@ public class Complex {
 		return new Complex(re + x, im);
 	}
 
+	@Override
 	public Complex add(Complex z) {
 		return new Complex(re + z.re(), im + z.im());
 	}
@@ -62,6 +65,7 @@ public class Complex {
 		return new Complex(re - x);
 	}
 
+	@Override
 	public Complex subtract(Complex z) {
 		return new Complex(re - z.re(), im - z.im());
 	}
@@ -70,6 +74,7 @@ public class Complex {
 		return new Complex(re * x, im * x);
 	}
 
+	@Override
 	public Complex multiply(Complex z) {
 		return new Complex(re * z.re() - im * z.im(), im * z.re() + re * z.im());
 	}
@@ -78,12 +83,14 @@ public class Complex {
 		return new Complex(re / x, im / x);
 	}
 
+	@Override
 	public Complex divide(Complex z) {
 		double absSq = z.absSq();
 		return new Complex((re * z.re() + im * z.im()) / absSq,
 				(im * z.re() - re * z.im()) / absSq);
 	}
 
+	@Override
 	public Complex inverse() {
 		double absSq = this.absSq();
 		return new Complex(re / absSq, -im / absSq);
@@ -173,4 +180,5 @@ public class Complex {
 		//Complex exp = exp(z.multiply(PI));
 		System.out.println("Result: " + I.pow(I));
 	}
+
 }
