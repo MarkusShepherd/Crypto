@@ -1,4 +1,8 @@
-package info.riemannhypothesis.math.structure;
+package info.riemannhypothesis.math.structure.concrete;
+
+import info.riemannhypothesis.math.structure.Field;
+import info.riemannhypothesis.math.structure.Ring;
+import info.riemannhypothesis.math.structure.VectorSpace;
 
 import java.util.ArrayList;
 
@@ -62,6 +66,18 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 	public Matrix<F> multiply(F that) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean isZero() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isOne() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

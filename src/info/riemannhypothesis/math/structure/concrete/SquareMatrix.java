@@ -1,4 +1,6 @@
-package info.riemannhypothesis.math.structure;
+package info.riemannhypothesis.math.structure.concrete;
+
+import info.riemannhypothesis.math.structure.Field;
 
 public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 

@@ -1,10 +1,9 @@
 package info.riemannhypothesis.math.structure;
 
-public interface GroupMultiplicative<G> {
+public interface GroupMultiplicative<G extends GroupMultiplicative<G>> extends
+		MonoidMultiplicative<G> {
 
 	public G inverse();
-
-	public G multiply(G that);
 
 	public G divide(G that);
 

@@ -1,7 +1,10 @@
-package info.riemannhypothesis.math.structure;
+package info.riemannhypothesis.math.structure.concrete;
+
+import info.riemannhypothesis.math.structure.Field;
+import info.riemannhypothesis.math.structure.VectorSpaceNormed;
 
 
-public class Complex implements Field<Complex> {
+public class Complex implements Field<Complex>, VectorSpaceNormed<Complex, Complex> {
 
 	public final static Complex ZERO = new Complex(0, 0);
 	public final static Complex ONE = new Complex(1, 0);
@@ -31,25 +34,9 @@ public class Complex implements Field<Complex> {
 		return im;
 	}
 
-	public double abs() {
-		return Math.sqrt(re * re + im * im);
-	}
-
-	public double absSq() {
-		return re * re + im * im;
-	}
-
-	public double arg() {
-		return Math.atan2(im, re);
-	}
-
 	@Override
 	public Complex negate() {
 		return new Complex(-re, -im);
-	}
-
-	public Complex conjugate() {
-		return new Complex(re, -im);
 	}
 
 	public Complex add(double x) {
@@ -68,6 +55,12 @@ public class Complex implements Field<Complex> {
 	@Override
 	public Complex subtract(Complex z) {
 		return new Complex(re - z.re(), im - z.im());
+	}
+
+	@Override
+	public Complex inverse() {
+		double absSq = this.absSq();
+		return new Complex(re / absSq, -im / absSq);
 	}
 
 	public Complex multiply(double x) {
@@ -91,9 +84,24 @@ public class Complex implements Field<Complex> {
 	}
 
 	@Override
-	public Complex inverse() {
-		double absSq = this.absSq();
-		return new Complex(re / absSq, -im / absSq);
+	public double norm() {
+		return abs();
+	}
+
+	public double abs() {
+		return Math.sqrt(re * re + im * im);
+	}
+
+	public double absSq() {
+		return re * re + im * im;
+	}
+
+	public double arg() {
+		return Math.atan2(im, re);
+	}
+
+	public Complex conjugate() {
+		return new Complex(re, -im);
 	}
 
 	public Complex exp() {
@@ -179,6 +187,16 @@ public class Complex implements Field<Complex> {
 		//Complex z = I.multiply(-0.034234);
 		//Complex exp = exp(z.multiply(PI));
 		System.out.println("Result: " + I.pow(I));
+	}
+
+	@Override
+	public boolean isZero() {
+		return equals(ZERO);
+	}
+
+	@Override
+	public boolean isOne() {
+		return equals(ONE);
 	}
 
 }
