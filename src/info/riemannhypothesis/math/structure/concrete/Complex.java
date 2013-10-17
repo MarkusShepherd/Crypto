@@ -179,6 +179,16 @@ public class Complex implements Field<Complex>, VectorSpaceNormed<Complex, Compl
 	}
 
 	@Override
+	public boolean isZero() {
+		return equals(ZERO);
+	}
+
+	@Override
+	public boolean isOne() {
+		return equals(ONE);
+	}
+
+	@Override
 	public String toString() {
 		return "" + re + " + " + im + "i";
 	}
@@ -187,16 +197,6 @@ public class Complex implements Field<Complex>, VectorSpaceNormed<Complex, Compl
 		//Complex z = I.multiply(-0.034234);
 		//Complex exp = exp(z.multiply(PI));
 		System.out.println("Result: " + I.pow(I));
-	}
-
-	@Override
-	public boolean isZero() {
-		return equals(ZERO);
-	}
-
-	@Override
-	public boolean isOne() {
-		return equals(ONE);
 	}
 
 }
