@@ -272,15 +272,19 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 		SquareMatrix<Complex> temp = (SquareMatrix<Complex>) BtA
 				.deleteRowAndColumn(0, 0);
 		System.out.println("(B * A) submatrix 0, 0: " + temp.toString()
-				+ "; det: " + temp.det() + "; minor: " + BtA.minor(0, 0) + "; cofactor: " + BtA.cofactor(0, 0));
+				+ "; det: " + temp.det() + "; minor: " + BtA.minor(0, 0)
+				+ "; cofactor: " + BtA.cofactor(0, 0));
 		temp = (SquareMatrix<Complex>) BtA.deleteRowAndColumn(1, 0);
 		System.out.println("(B * A) submatrix 1, 0: " + temp.toString()
-				+ "; det: " + temp.det() + "; minor: " + BtA.minor(1, 0) + "; cofactor: " + BtA.cofactor(1, 0));
+				+ "; det: " + temp.det() + "; minor: " + BtA.minor(1, 0)
+				+ "; cofactor: " + BtA.cofactor(1, 0));
 		temp = (SquareMatrix<Complex>) BtA.deleteRowAndColumn(2, 0);
 		System.out.println("(B * A) submatrix 2, 0: " + temp.toString()
-				+ "; det: " + temp.det() + "; minor: " + BtA.minor(2, 0) + "; cofactor: " + BtA.cofactor(2, 0));
+				+ "; det: " + temp.det() + "; minor: " + BtA.minor(2, 0)
+				+ "; cofactor: " + BtA.cofactor(2, 0));
 		temp = (SquareMatrix<Complex>) BtA.deleteRowAndColumn(1, 1);
 		System.out.println("(B * A) submatrix 1, 1: " + temp.toString()
-				+ "; det: " + temp.det() + "; minor: " + BtA.minor(1, 1) + "; cofactor: " + BtA.cofactor(1, 1));
+				+ "; det: " + temp.det() + "; minor: " + BtA.minor(1, 1)
+				+ "; cofactor: " + BtA.cofactor(1, 1));
 	}
 }

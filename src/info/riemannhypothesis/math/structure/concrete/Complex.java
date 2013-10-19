@@ -209,7 +209,8 @@ public class Complex implements Field<Complex>,
 		}
 		if (im < 0) {
 			return df.format(re)
-					+ (im == -1 ? " - i" : " - " + df.format(Math.abs(im)) + "i");
+					+ (im == -1 ? " - i" : " - " + df.format(Math.abs(im))
+							+ "i");
 		}
 		return df.format(re) + (im == 1 ? " + i" : " + " + df.format(im) + "i");
 	}
