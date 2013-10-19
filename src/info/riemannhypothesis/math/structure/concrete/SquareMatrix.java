@@ -15,6 +15,14 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 		this.n = n;
 	}
 
+	public SquareMatrix(F[][] elements) {
+		super(elements);
+		if (rows() != cols()) {
+			throw new IllegalArgumentException();
+		}
+		this.n = rows();
+	}
+
 	public SquareMatrix(ArrayList<ArrayList<F>> elements) {
 		super(elements);
 		if (rows() != cols()) {
@@ -49,7 +57,9 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 	}
 
 	public SquareMatrix<F> multiply(SquareMatrix<F> that) {
-		return new SquareMatrix<F>(this.multiply(that).elements());
+		return (SquareMatrix<F>) super.multiply(that);
+		// return new SquareMatrix<F>(this.multiply((Matrix<F>)
+		// that).elements());
 	}
 
 	public SquareMatrix<F> divide(SquareMatrix<F> that) {
@@ -82,32 +92,12 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 		if (n == 2) {
 			return get(1 - row, 1 - col);
 		}
-		return deleteRowAndColumn(row, col).det();
-	}
-
-	public SquareMatrix<F> deleteRowAndColumn(int row, int col) {
-		if (n == 1 || row < 0 || col < 0 || row >= n || col >= n) {
-			throw new IllegalArgumentException();
-		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(n - 1);
-		for (int i = 0; i < n; i++) {
-			if (i == row) {
-				continue;
-			}
-			ArrayList<F> temp = new ArrayList<F>(n - 1);
-			for (int j = 0; j < n; j++) {
-				if (j == col) {
-					continue;
-				}
-				temp.add(get(i, j));
-			}
-			newElements.add(temp);
-		}
-		return new SquareMatrix<F>(newElements);
+		return ((SquareMatrix<F>) deleteRowAndColumn(row, col)).det();
 	}
 
 	public F cofactor(int row, int col) {
-		return row + col % 2 == 0 ? minor(row, col) : minor(row, col).negate();
+		return (row + col) % 2 == 0 ? minor(row, col) : minor(row, col)
+				.negate();
 	}
 
 	public F trace() {
@@ -116,5 +106,25 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 			value = value.add(get(i, i));
 		}
 		return value;
+	}
+
+	public static void main(String[] args) {
+		SquareMatrix<Complex> matrix = new SquareMatrix<Complex>(
+				new Complex[][] { { Complex.ONE, new Complex(2.0000) },
+						{ Complex.I, Complex.PI } });
+		System.out.println("Matrix: " + matrix.toString() + "; dimension: "
+				+ matrix.n());
+		System.out.println("Transposed: " + matrix.transpose().toString());
+		System.out.println("Determinant: " + matrix.det().toString());
+		System.out.println("Trace: " + matrix.trace().toString());
+		System.out.println("Matrix * Matrix: "
+				+ matrix.multiply(matrix).toString());
+		if (!matrix.det().isZero()) {
+			System.out.println("Inverse: " + matrix.inverse().toString());
+			System.out.println("Matrix * Inverse: "
+					+ matrix.multiply(matrix.inverse()).toString());
+			System.out.println("Inverse * Matrix: "
+					+ matrix.inverse().multiply(matrix).toString());
+		}
 	}
 }

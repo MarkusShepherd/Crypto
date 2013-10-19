@@ -71,6 +71,7 @@ public class Real implements Field<Real>, VectorSpaceNormed<Real, Real>,
 
 	@Override
 	public int compareTo(Real that) {
+		// return (int) (this.re - that.re);
 		if (re < that.re()) {
 			return -1;
 		}

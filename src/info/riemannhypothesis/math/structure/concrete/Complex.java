@@ -3,8 +3,12 @@ package info.riemannhypothesis.math.structure.concrete;
 import info.riemannhypothesis.math.structure.Field;
 import info.riemannhypothesis.math.structure.VectorSpaceNormed;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
-public class Complex implements Field<Complex>, VectorSpaceNormed<Complex, Complex> {
+public class Complex implements Field<Complex>,
+		VectorSpaceNormed<Complex, Complex> {
 
 	public final static Complex ZERO = new Complex(0, 0);
 	public final static Complex ONE = new Complex(1, 0);
@@ -190,12 +194,29 @@ public class Complex implements Field<Complex>, VectorSpaceNormed<Complex, Compl
 
 	@Override
 	public String toString() {
-		return "" + re + " + " + im + "i";
+		if (isZero()) {
+			return "0";
+		}
+		NumberFormat df = DecimalFormat.getInstance();
+		df.setMinimumFractionDigits(0);
+		df.setMaximumFractionDigits(10);
+		df.setRoundingMode(RoundingMode.HALF_EVEN);
+		if (im == 0) {
+			return df.format(re);
+		}
+		if (re == 0) {
+			return im == 1 ? "i" : im == -1 ? "-i" : df.format(im) + "i";
+		}
+		if (im < 0) {
+			return df.format(re)
+					+ (im == -1 ? " - i" : " - " + df.format(Math.abs(im)) + "i");
+		}
+		return df.format(re) + (im == 1 ? " + i" : " + " + df.format(im) + "i");
 	}
 
 	public static void main(String[] arg) {
-		//Complex z = I.multiply(-0.034234);
-		//Complex exp = exp(z.multiply(PI));
+		// Complex z = I.multiply(-0.034234);
+		// Complex exp = exp(z.multiply(PI));
 		System.out.println("Result: " + I.pow(I));
 	}
 
