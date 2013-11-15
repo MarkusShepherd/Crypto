@@ -7,11 +7,20 @@
  * freely granted, provided that this notice is preserved.
  */
 package org.jscience.physics.amount;
-import javolution.lang.MathLib;
-
-import javax.measure.quantity.*;
+import javax.measure.quantity.Acceleration;
+import javax.measure.quantity.Dimensionless;
+import javax.measure.quantity.Duration;
+import javax.measure.quantity.ElectricCharge;
+import javax.measure.quantity.ElectricConductance;
+import javax.measure.quantity.ElectricResistance;
+import javax.measure.quantity.Length;
+import javax.measure.quantity.MagneticFlux;
+import javax.measure.quantity.Mass;
+import javax.measure.quantity.Velocity;
 import javax.measure.unit.SI;
 import javax.measure.unit.Unit;
+
+import javolution.lang.MathLib;
 
 /**
  * <p> This class provides most accurate physical constants measurement;
