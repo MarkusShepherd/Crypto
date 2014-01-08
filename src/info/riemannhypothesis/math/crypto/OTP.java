@@ -7,10 +7,10 @@ public class OTP {
 		char[] m1c = m1s.toCharArray();
 		String c1s = "6c73d5240a948c86981bc294814d";
 		char[] c1c = hexToCharArray(c1s);
-		char[] key = minus(c1c, m1c);
+		char[] key = xor(c1c, m1c);
 		String m2s = "attack at dusk";
 		char[] m2c = m2s.toCharArray();
-		char[] c2c = plus(m2c, key);
+		char[] c2c = xor(m2c, key);
 
 		System.out.println("Message 1 plain ascii:  " + m1s);
 		System.out.println("Message 1 plain hex:    " + charArrayToHex(m1c));
@@ -30,7 +30,12 @@ public class OTP {
 				"32510bfbacfbb9befd54415da243e1695ecabd58c519cd4bd90f1fa6ea5ba47b01c909ba7696cf606ef40c04afe1ac0aa8148dd066592ded9f8774b529c7ea125d298e8883f5e9305f4b44f915cb2bd05af51373fd9b4af511039fa2d96f83414aaaf261bda2e97b170fb5cce2a53e675c154c0d9681596934777e2275b381ce2e40582afe67650b13e72287ff2270abcf73bb028932836fbdecfecee0a3b894473c1bbeb6b4913a536ce4f9b13f1efff71ea313c8661dd9a4ce",
 				"315c4eeaa8b5f8bffd11155ea506b56041c6a00c8a08854dd21a4bbde54ce56801d943ba708b8a3574f40c00fff9e00fa1439fd0654327a3bfc860b92f89ee04132ecb9298f5fd2d5e4b45e40ecc3b9d59e9417df7c95bba410e9aa2ca24c5474da2f276baa3ac325918b2daada43d6712150441c2e04f6565517f317da9d3",
 				"271946f9bbb2aeadec111841a81abc300ecaa01bd8069d5cc91005e9fe4aad6e04d513e96d99de2569bc5e50eeeca709b50a8a987f4264edb6896fb537d0a716132ddc938fb0f836480e06ed0fcd6e9759f40462f9cf57f4564186a2c1778f1543efa270bda5e933421cbe88a4a52222190f471e9bd15f652b653b7071aec59a2705081ffe72651d08f822c9ed6d76e48b63ab15d0208573a7eef027",
-				"466d06ece998b7a2fb1d464fed2ced7641ddaa3cc31c9941cf110abbf409ed39598005b3399ccfafb61d0315fca0a314be138a9f32503bedac8067f03adbf3575c3b8edc9ba7f537530541ab0f9f3cd04ff50d66f1d559ba520e89a2cb2a83" };
+				"466d06ece998b7a2fb1d464fed2ced7641ddaa3cc31c9941cf110abbf409ed39598005b3399ccfafb61d0315fca0a314be138a9f32503bedac8067f03adbf3575c3b8edc9ba7f537530541ab0f9f3cd04ff50d66f1d559ba520e89a2cb2a83",
+				"32510ba9babebbbefd001547a810e67149caee11d945cd7fc81a05e9f85aac650e9052ba6a8cd8257bf14d13e6f0a803b54fde9e77472dbff89d71b57bddef121336cb85ccb8f3315f4b52e301d16e9f52f904",
+				charArrayToHex("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+						.toCharArray()),
+				charArrayToHex("                                                    "
+						.toCharArray()) };
 
 		char[][] cc = new char[cs.length][];
 		int i = 0;
@@ -41,8 +46,8 @@ public class OTP {
 		}
 		for (int x = 0; x < cc.length; x++) {
 			for (int y = x + 1; y < cc.length; y++) {
-				System.out.println("M" + x + " XOR M" + y + ": "
-						+ charArrayToHex(plus(cc[x], cc[y])));
+				System.out.println("M" + (x + 1) + " XOR M" + (y + 1) + ": "
+						+ charArrayToHex(xor(cc[x], cc[y]), " "));
 			}
 		}
 	}
@@ -65,15 +70,26 @@ public class OTP {
 	}
 
 	public static String charArrayToHex(char[] input) {
+		return charArrayToHex(input, null);
+	}
+
+	public static String charArrayToHex(char[] input, String sep) {
 		if (input == null || input.length == 0) {
 			return "";
 		}
+		boolean insertSep = true;
+		if (sep == null || sep.length() == 0) {
+			insertSep = false;
+		}
 		StringBuilder temp = new StringBuilder(input.length);
-		for (char c : input) {
-			if (c < 16) {
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] < 16) {
 				temp.append('0');
 			}
-			temp.append(Integer.toHexString(c));
+			temp.append(Integer.toHexString(input[i]));
+			if (insertSep && i < input.length - 1) {
+				temp.append(sep);
+			}
 		}
 		return temp.toString();
 	}
@@ -100,6 +116,7 @@ public class OTP {
 		return out;
 	}
 
+	@Deprecated
 	public static char[] plus(char[] seq1, char[] seq2) {
 		return xor(seq1, seq2);
 		/*
@@ -113,6 +130,7 @@ public class OTP {
 		 */
 	}
 
+	@Deprecated
 	public static char[] minus(char[] seq1, char[] seq2) {
 		return xor(seq1, seq2);
 		/*
