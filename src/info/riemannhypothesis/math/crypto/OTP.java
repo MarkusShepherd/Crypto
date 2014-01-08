@@ -3,22 +3,21 @@ package info.riemannhypothesis.math.crypto;
 public class OTP {
 
 	public static void main(String[] args) {
-		String m1s = "attack at dawn";
-		char[] m1c = m1s.toCharArray();
-		String c1s = "6c73d5240a948c86981bc294814d";
-		char[] c1c = hexToCharArray(c1s);
-		char[] key = xor(c1c, m1c);
-		String m2s = "attack at dusk";
-		char[] m2c = m2s.toCharArray();
-		char[] c2c = xor(m2c, key);
-
-		System.out.println("Message 1 plain ascii:  " + m1s);
-		System.out.println("Message 1 plain hex:    " + charArrayToHex(m1c));
-		System.out.println("Message 1 cipher hex:   " + charArrayToHex(c1c));
-		System.out.println("Encryption key:         " + charArrayToHex(key));
-		System.out.println("Message 2 plain ascii:  " + m2s);
-		System.out.println("Message 2 plain hex:    " + charArrayToHex(m2c));
-		System.out.println("Message 2 cipher hex:   " + charArrayToHex(c2c));
+		/*
+		 * String m1s = "attack at dawn"; char[] m1c = m1s.toCharArray(); String
+		 * c1s = "6c73d5240a948c86981bc294814d"; char[] c1c =
+		 * hexToCharArray(c1s); char[] key = xor(c1c, m1c); String m2s =
+		 * "attack at dusk"; char[] m2c = m2s.toCharArray(); char[] c2c =
+		 * xor(m2c, key);
+		 * 
+		 * System.out.println("Message 1 plain ascii:  " + m1s);
+		 * System.out.println("Message 1 plain hex:    " + charArrayToHex(m1c));
+		 * System.out.println("Message 1 cipher hex:   " + charArrayToHex(c1c));
+		 * System.out.println("Encryption key:         " + charArrayToHex(key));
+		 * System.out.println("Message 2 plain ascii:  " + m2s);
+		 * System.out.println("Message 2 plain hex:    " + charArrayToHex(m2c));
+		 * System.out.println("Message 2 cipher hex:   " + charArrayToHex(c2c));
+		 */
 
 		String[] cs = new String[] {
 				"315c4eeaa8b5f8aaf9174145bf43e1784b8fa00dc71d885a804e5ee9fa40b16349c146fb778cdf2d3aff021dfff5b403b510d0d0455468aeb98622b137dae857553ccd8883a7bc37520e06e515d22c954eba5025b8cc57ee59418ce7dc6bc41556bdb36bbca3e8774301fbcaa3b83b220809560987815f65286764703de0f3d524400a19b159610b11ef3e",
@@ -32,24 +31,55 @@ public class OTP {
 				"271946f9bbb2aeadec111841a81abc300ecaa01bd8069d5cc91005e9fe4aad6e04d513e96d99de2569bc5e50eeeca709b50a8a987f4264edb6896fb537d0a716132ddc938fb0f836480e06ed0fcd6e9759f40462f9cf57f4564186a2c1778f1543efa270bda5e933421cbe88a4a52222190f471e9bd15f652b653b7071aec59a2705081ffe72651d08f822c9ed6d76e48b63ab15d0208573a7eef027",
 				"466d06ece998b7a2fb1d464fed2ced7641ddaa3cc31c9941cf110abbf409ed39598005b3399ccfafb61d0315fca0a314be138a9f32503bedac8067f03adbf3575c3b8edc9ba7f537530541ab0f9f3cd04ff50d66f1d559ba520e89a2cb2a83",
 				"32510ba9babebbbefd001547a810e67149caee11d945cd7fc81a05e9f85aac650e9052ba6a8cd8257bf14d13e6f0a803b54fde9e77472dbff89d71b57bddef121336cb85ccb8f3315f4b52e301d16e9f52f904",
-				charArrayToHex("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-						.toCharArray()),
-				charArrayToHex("                                                    "
-						.toCharArray()) };
+		/*
+		 * charArrayToHex(
+		 * "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ.,  "
+		 * .toCharArray()),
+		 * charArrayToHex("                                                       "
+		 * .toCharArray())
+		 */};
 
 		char[][] cc = new char[cs.length][];
 		int i = 0;
 		for (String str : cs) {
 			cc[i] = hexToCharArray(str);
-			System.out.println(charArrayToHex(cc[i]));
+			// System.out.println(charArrayToHex(cc[i]));
 			i++;
 		}
-		for (int x = 0; x < cc.length; x++) {
-			for (int y = x + 1; y < cc.length; y++) {
-				System.out.println("M" + (x + 1) + " XOR M" + (y + 1) + ": "
-						+ charArrayToHex(xor(cc[x], cc[y]), " "));
+		System.out.print("            ");
+		for (i = 1; i <= 99; i++) {
+			System.out.print(' ');
+			if (i < 10) {
+				System.out.print('0');
 			}
+			System.out.print(i);
 		}
+		System.out.println();
+		// for (int x = 0; x < 1; x++) {
+		int x = 9;
+		for (int y = 0; y < cc.length; y++) {
+			if (x == y) {
+				continue;
+			}
+			System.out.println("M" + (x < 9 ? "0" : "") + (x + 1) + " XOR M"
+					+ (y < 9 ? "0" : "") + (y + 1) + ": "
+					+ charArrayToHex(xor(cc[x], cc[y]), " "));
+		}
+		// }
+		System.out.println();
+		char test = ' ';
+		System.out.println("XOR \"" + test + "\":");
+		for (i = 0x20; i <= 0x7e; i++) {
+			System.out.print("  ");
+			System.out.print((char) i);
+		}
+		System.out.println();
+		for (i = 0x20; i <= 0x7e; i++) {
+			System.out.print(' ');
+			System.out.print(charArrayToHex(xor(new char[] { (char) i },
+					new char[] { test })));
+		}
+		System.out.println();
 	}
 
 	public static char[] hexToCharArray(String input) {
@@ -103,7 +133,7 @@ public class OTP {
 		}
 		int len1 = seq1.length;
 		int len2 = seq2.length;
-		int len = Math.max(len1, len2);
+		int len = Math.min(len1, len2);
 		if (len == 0) {
 			return new char[] {};
 		}
