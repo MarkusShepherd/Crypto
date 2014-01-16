@@ -27,8 +27,12 @@ public class CryptoTools {
 		byte[] out = new byte[len];
 		for (int i = 0; i < len; i++) {
 			try {
-				out[i] = (byte) Integer.parseInt(
+				int temp = Integer.parseInt(
 						input.substring(2 * i, 2 * i + 2), 16);
+				while (temp > 127) {
+					temp -= 256;
+				}
+				out[i] = (byte) temp;
 			} catch (NumberFormatException e) {
 				return out;
 			}
@@ -75,10 +79,14 @@ public class CryptoTools {
 		}
 		StringBuilder temp = new StringBuilder(input.length);
 		for (int i = 0; i < input.length; i++) {
-			if (input[i] < 16) {
+			int b = input[i];
+			while (b < 0) {
+				b += 256;
+			}
+			if (b < 16) {
 				temp.append('0');
 			}
-			temp.append(Integer.toHexString(input[i]));
+			temp.append(Integer.toHexString(b));
 			if (insertSep && i < input.length - 1) {
 				temp.append(sep);
 			}
