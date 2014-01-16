@@ -42,7 +42,7 @@ public class OTP {
 		char[][] cc = new char[cs.length][];
 		int i = 0;
 		for (String str : cs) {
-			cc[i] = hexToCharArray(str);
+			cc[i] = CryptoTools.hexToCharArray(str);
 			// System.out.println(charArrayToHex(cc[i]));
 			i++;
 		}
@@ -61,9 +61,15 @@ public class OTP {
 			if (x == y) {
 				continue;
 			}
-			System.out.println("M" + (x < 9 ? "0" : "") + (x + 1) + " XOR M"
-					+ (y < 9 ? "0" : "") + (y + 1) + ": "
-					+ charArrayToHex(xor(cc[x], cc[y]), " "));
+			System.out.println("M"
+					+ (x < 9 ? "0" : "")
+					+ (x + 1)
+					+ " XOR M"
+					+ (y < 9 ? "0" : "")
+					+ (y + 1)
+					+ ": "
+					+ CryptoTools.charArrayToHex(CryptoTools.xor(cc[x], cc[y]),
+							" "));
 		}
 		// }
 		System.out.println();
@@ -76,79 +82,15 @@ public class OTP {
 		System.out.println();
 		for (i = 0x20; i <= 0x7e; i++) {
 			System.out.print(' ');
-			System.out.print(charArrayToHex(xor(new char[] { (char) i },
-					new char[] { test })));
+			System.out.print(CryptoTools.charArrayToHex(CryptoTools.xor(
+					new char[] { (char) i }, new char[] { test })));
 		}
 		System.out.println();
 	}
 
-	public static char[] hexToCharArray(String input) {
-		if (input == null || input.length() == 0 || input.length() % 2 != 0) {
-			return new char[] {};
-		}
-		int len = input.length() / 2;
-		char[] out = new char[len];
-		for (int i = 0; i < len; i++) {
-			try {
-				out[i] = (char) Integer.parseInt(
-						input.substring(2 * i, 2 * i + 2), 16);
-			} catch (NumberFormatException e) {
-				return out;
-			}
-		}
-		return out;
-	}
-
-	public static String charArrayToHex(char[] input) {
-		return charArrayToHex(input, null);
-	}
-
-	public static String charArrayToHex(char[] input, String sep) {
-		if (input == null || input.length == 0) {
-			return "";
-		}
-		boolean insertSep = true;
-		if (sep == null || sep.length() == 0) {
-			insertSep = false;
-		}
-		StringBuilder temp = new StringBuilder(input.length);
-		for (int i = 0; i < input.length; i++) {
-			if (input[i] < 16) {
-				temp.append('0');
-			}
-			temp.append(Integer.toHexString(input[i]));
-			if (insertSep && i < input.length - 1) {
-				temp.append(sep);
-			}
-		}
-		return temp.toString();
-	}
-
-	public static char[] xor(char[] seq1, char[] seq2) {
-		if (seq1 == null) {
-			seq1 = new char[] {};
-		}
-		if (seq2 == null) {
-			seq2 = new char[] {};
-		}
-		int len1 = seq1.length;
-		int len2 = seq2.length;
-		int len = Math.min(len1, len2);
-		if (len == 0) {
-			return new char[] {};
-		}
-		char[] out = new char[len];
-		for (int i = 0; i < len; i++) {
-			char c1 = i < len1 ? seq1[i] : 0;
-			char c2 = i < len2 ? seq2[i] : 0;
-			out[i] = (char) (c1 ^ c2);
-		}
-		return out;
-	}
-
 	@Deprecated
 	public static char[] plus(char[] seq1, char[] seq2) {
-		return xor(seq1, seq2);
+		return CryptoTools.xor(seq1, seq2);
 		/*
 		 * if (seq1 == null) { seq1 = new char[] {}; } if (seq2 == null) { seq2
 		 * = new char[] {}; } int len1 = seq1.length; int len2 = seq2.length;
@@ -162,7 +104,7 @@ public class OTP {
 
 	@Deprecated
 	public static char[] minus(char[] seq1, char[] seq2) {
-		return xor(seq1, seq2);
+		return CryptoTools.xor(seq1, seq2);
 		/*
 		 * if (seq1 == null) { seq1 = new char[] {}; } if (seq2 == null) { seq2
 		 * = new char[] {}; } int len1 = seq1.length; int len2 = seq2.length;
