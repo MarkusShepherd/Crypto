@@ -1,4 +1,4 @@
-package info.riemannhypothesis.math.crypto;
+package info.riemannhypothesis.crypto;
 
 public class Week2 {
 
