@@ -7,6 +7,10 @@ public class SHA implements HashFunction {
 
 	private final MessageDigest messageDigest;
 
+	public SHA() throws NoSuchAlgorithmException {
+		this(256);
+	}
+
 	public SHA(int method) throws NoSuchAlgorithmException {
 		switch (method) {
 		case 1:
