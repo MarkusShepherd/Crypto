@@ -35,6 +35,36 @@ public class ByteSequence {
 		return this.seq.length;
 	}
 
+	public ByteSequence prepend(byte that) {
+		byte[] temp = new byte[this.length() + 1];
+		temp[0] = that;
+		System.arraycopy(this.getByteArray(), 0, temp, 1, this.length());
+		return new ByteSequence(temp);
+	}
+
+	public ByteSequence prepend(ByteSequence that) {
+		byte[] temp = new byte[that.length() + this.length()];
+		System.arraycopy(that.getByteArray(), 0, temp, 0, that.length());
+		System.arraycopy(this.getByteArray(), 0, temp, that.length(),
+				this.length());
+		return new ByteSequence(temp);
+	}
+
+	public ByteSequence append(byte that) {
+		byte[] temp = new byte[this.length() + 1];
+		System.arraycopy(this.getByteArray(), 0, temp, 0, this.length());
+		temp[this.length()] = that;
+		return new ByteSequence(temp);
+	}
+
+	public ByteSequence append(ByteSequence that) {
+		byte[] temp = new byte[this.length() + that.length()];
+		System.arraycopy(this.getByteArray(), 0, temp, 0, this.length());
+		System.arraycopy(that.getByteArray(), 0, temp, this.length(),
+				that.length());
+		return new ByteSequence(temp);
+	}
+
 	public ByteSequence xor(ByteSequence that) {
 		int len = Math.min(this.length(), that.length());
 		byte[] result = new byte[len];
@@ -124,4 +154,5 @@ public class ByteSequence {
 	public static ByteSequence fromHexString(String input) {
 		return fromNumString(input, 16, 2);
 	}
+
 }
