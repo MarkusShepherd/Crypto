@@ -40,6 +40,10 @@ public class ByteSequence {
 		return new ByteSequence(result);
 	}
 
+	public ByteSequence range(int from, int to) {
+		return new ByteSequence(Arrays.copyOfRange(seq, from, to));
+	}
+
 	@Override
 	public String toString() {
 		return new String(seq, DEFAULT_CHARSET);
