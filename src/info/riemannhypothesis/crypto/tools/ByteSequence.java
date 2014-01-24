@@ -12,7 +12,7 @@ public class ByteSequence {
 	private final byte[] seq;
 
 	public ByteSequence(byte[] seq) {
-		this.seq = Arrays.copyOf(seq, seq.length);
+		this.seq = seq;
 	}
 
 	public ByteSequence(String str) {
@@ -21,6 +21,10 @@ public class ByteSequence {
 
 	public ByteSequence(String str, Charset charset) {
 		this.seq = str.getBytes(charset);
+	}
+
+	public byte[] getByteArray() {
+		return seq;
 	}
 
 	public byte byteAt(int pos) {

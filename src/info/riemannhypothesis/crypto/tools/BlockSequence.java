@@ -14,6 +14,10 @@ public class BlockSequence {
 		}
 	}
 
+	public ByteSequence[] getBlockArray() {
+		return blocks;
+	}
+
 	public ByteSequence blockAt(int pos) {
 		return blocks[pos];
 	}
