@@ -42,6 +42,10 @@ public class ByteSequence {
 		return new ByteSequence(temp);
 	}
 
+	public ByteSequence prepend(byte[] bytes) {
+		return this.prepend(new ByteSequence(bytes));
+	}
+
 	public ByteSequence prepend(ByteSequence that) {
 		byte[] temp = new byte[that.length() + this.length()];
 		System.arraycopy(that.getByteArray(), 0, temp, 0, that.length());
@@ -55,6 +59,10 @@ public class ByteSequence {
 		System.arraycopy(this.getByteArray(), 0, temp, 0, this.length());
 		temp[this.length()] = that;
 		return new ByteSequence(temp);
+	}
+
+	public ByteSequence append(byte[] bytes) {
+		return this.append(new ByteSequence(bytes));
 	}
 
 	public ByteSequence append(ByteSequence that) {
