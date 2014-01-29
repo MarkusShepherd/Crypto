@@ -54,6 +54,8 @@ public class ByteSequence {
 		return new ByteSequence(temp);
 	}
 
+	// TODO insert function
+
 	public ByteSequence append(byte that) {
 		byte[] temp = new byte[this.length() + 1];
 		System.arraycopy(this.getByteArray(), 0, temp, 0, this.length());
@@ -71,6 +73,19 @@ public class ByteSequence {
 		System.arraycopy(that.getByteArray(), 0, temp, this.length(),
 				that.length());
 		return new ByteSequence(temp);
+	}
+
+	public void setByteAt(int pos, byte subs) {
+		seq[pos] = subs;
+	}
+
+	public ByteSequence xor(byte that) {
+		int len = Math.min(this.length(), 1);
+		byte[] result = new byte[len];
+		for (int i = 0; i < len; i++) {
+			result[i] = (byte) (this.byteAt(i) ^ that);
+		}
+		return new ByteSequence(result);
 	}
 
 	public ByteSequence xor(ByteSequence that) {
