@@ -15,11 +15,12 @@ public class BlockSequence {
 		int arrayLength = (int) Math.round(1.0 * bytes.length() / blockLength);
 		blocks = new ByteSequence[arrayLength];
 		for (int i = 0; i < arrayLength; i++) {
-			blocks[i] = bytes.range(i * blockLength, (i + i) * blockLength);
+			blocks[i] = bytes.range(i * blockLength, (i + 1) * blockLength);
 		}
 	}
 
-	public BlockSequence(int blockLength, InputStream stream, int streamLength) throws IOException {
+	public BlockSequence(int blockLength, InputStream stream, int streamLength)
+			throws IOException {
 		this.blockLength = blockLength;
 		int arrayLength = (int) Math.round(1.0 * streamLength / blockLength);
 		blocks = new ByteSequence[arrayLength];
@@ -32,7 +33,8 @@ public class BlockSequence {
 		}
 	}
 
-	public BlockSequence(int blockLength, FileInputStream stream) throws IOException {
+	public BlockSequence(int blockLength, FileInputStream stream)
+			throws IOException {
 		this(blockLength, stream, stream.available());
 	}
 
@@ -47,4 +49,22 @@ public class BlockSequence {
 	public int length() {
 		return blocks.length;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		for (ByteSequence bytes : blocks) {
+			builder.append(bytes.toString());
+		}
+		return builder.toString();
+	}
+
+	public String toHexString() {
+		StringBuilder builder = new StringBuilder();
+		for (ByteSequence bytes : blocks) {
+			builder.append(bytes.toHexString(null));
+		}
+		return builder.toString();
+	}
+
 }

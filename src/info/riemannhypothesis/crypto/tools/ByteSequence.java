@@ -3,7 +3,7 @@ package info.riemannhypothesis.crypto.tools;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
-public class ByteSequence {
+public class ByteSequence implements Cloneable {
 
 	public static final Charset DEFAULT_CHARSET = Charset.defaultCharset();
 	public static final ByteSequence EMPTY_SEQUENCE = new ByteSequence(
@@ -178,4 +178,8 @@ public class ByteSequence {
 		return fromNumString(input, 16, 2);
 	}
 
+	@Override
+	public ByteSequence clone() throws CloneNotSupportedException {
+		return new ByteSequence(Arrays.copyOf(seq, seq.length));
+	}
 }
