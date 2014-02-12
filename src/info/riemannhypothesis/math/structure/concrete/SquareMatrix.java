@@ -44,13 +44,12 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 			return null;
 		}
 		F detInv = det.inverse();
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(n);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[n][n];
 		for (int i = 0; i < n; i++) {
-			ArrayList<F> temp = new ArrayList<F>(n);
 			for (int j = 0; j < n; j++) {
-				temp.add(cofactor(j, i).multiply(detInv));
+				newElements[i][j] = cofactor(j, i).multiply(detInv);
 			}
-			newElements.add(temp);
 		}
 		this.inverse = new SquareMatrix<F>(newElements);
 		return inverse;
@@ -58,8 +57,6 @@ public class SquareMatrix<F extends Field<F>> extends Matrix<F> {
 
 	public SquareMatrix<F> multiply(SquareMatrix<F> that) {
 		return (SquareMatrix<F>) super.multiply(that);
-		// return new SquareMatrix<F>(this.multiply((Matrix<F>)
-		// that).elements());
 	}
 
 	public SquareMatrix<F> divide(SquareMatrix<F> that) {

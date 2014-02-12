@@ -10,7 +10,7 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 		Ring<Matrix<F>> {
 
 	private final int rows, cols;
-	private final ArrayList<ArrayList<F>> elements;
+	private final F[][] elements;
 
 	private Matrix<F> transpose;
 	private String string;
@@ -18,36 +18,30 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 	public Matrix(F[][] elements) {
 		rows = elements.length;
 		cols = elements[0].length;
-		this.elements = new ArrayList<ArrayList<F>>(rows);
-		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
-			for (int j = 0; j < cols; j++) {
-				temp.add(elements[i][j]);
-			}
-			this.elements.add(temp);
-		}
-	}
-
-	public Matrix(ArrayList<ArrayList<F>> elements) {
-		rows = elements.size();
-		cols = elements.get(0).size();
-		/*
-		 * for (ArrayList<F> row : elements) { if (row.size() != cols) { throw
-		 * new IllegalArgumentException(); } }
-		 */
 		this.elements = elements;
 	}
 
+	@SuppressWarnings("unchecked")
+	public Matrix(ArrayList<ArrayList<F>> elements) {
+		rows = elements.size();
+		cols = elements.get(0).size();
+		this.elements = (F[][]) new Field[rows][cols];
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				this.elements[i][j] = elements.get(i).get(j);
+			}
+		}
+	}
+
+	@SuppressWarnings("unchecked")
 	public Matrix(int rows, int cols, F fill) {
 		this.rows = rows;
 		this.cols = cols;
-		elements = new ArrayList<ArrayList<F>>(rows);
+		elements = (F[][]) new Field[rows][cols];
 		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
 			for (int j = 0; j < cols; j++) {
-				temp.add(fill);
+				elements[i][j] = fill;
 			}
-			this.elements.add(temp);
 		}
 	}
 
@@ -59,23 +53,22 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 		return cols;
 	}
 
-	ArrayList<ArrayList<F>> elements() {
+	F[][] elements() {
 		return elements;
 	}
 
 	public F get(int row, int col) {
-		return elements.get(row).get(col);
+		return elements[row][col];
 	}
 
 	@Override
 	public Matrix<F> negate() {
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(rows);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[rows][cols];
 		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
 			for (int j = 0; j < cols; j++) {
-				temp.add(elements.get(i).get(j));
+				newElements[i][j] = elements[i][j].negate();
 			}
-			newElements.add(temp);
 		}
 		return new Matrix<F>(newElements);
 	}
@@ -85,64 +78,60 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 		if (rows != that.rows() || cols != that.cols()) {
 			throw new IllegalArgumentException();
 		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(rows);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[rows][cols];
 		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
 			for (int j = 0; j < cols; j++) {
-				temp.add(get(i, j).add(that.get(i, j)));
+				newElements[i][j] = this.get(i, j).add(that.get(i, j));
 			}
-			newElements.add(temp);
 		}
 		return new Matrix<F>(newElements);
 	}
 
 	@Override
 	public Matrix<F> subtract(Matrix<F> that) throws IllegalArgumentException {
-		if (rows != that.rows() || cols != that.cols()) {
+		if (this.rows() != that.rows() || this.cols() != that.cols()) {
 			throw new IllegalArgumentException();
 		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(rows);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[rows][cols];
 		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
 			for (int j = 0; j < cols; j++) {
-				temp.add(get(i, j).subtract(that.get(i, j)));
+				newElements[i][j] = this.get(i, j).subtract(that.get(i, j));
 			}
-			newElements.add(temp);
 		}
 		return new Matrix<F>(newElements);
 	}
 
 	@Override
 	public Matrix<F> multiply(F that) {
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(rows);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[rows][cols];
 		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(cols);
 			for (int j = 0; j < cols; j++) {
-				temp.add(get(i, j).multiply(that));
+				newElements[i][j] = this.get(i, j).multiply(that);
 			}
-			newElements.add(temp);
 		}
 		return new Matrix<F>(newElements);
 	}
 
 	@Override
 	public Matrix<F> multiply(Matrix<F> that) {
-		if (cols != that.rows()) {
+		if (this.cols() != that.rows()) {
 			throw new IllegalArgumentException();
 		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(rows);
-		for (int i = 0; i < rows; i++) {
-			ArrayList<F> temp = new ArrayList<F>(that.cols());
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[this.rows()][that.cols()];
+		for (int i = 0; i < this.rows(); i++) {
 			for (int j = 0; j < that.cols(); j++) {
-				F value = get(i, 0).multiply(that.get(0, j));
-				for (int k = 1; k < cols; k++) {
+				F value = this.get(i, 0).multiply(that.get(0, j));
+				for (int k = 1; k < this.cols(); k++) {
 					value = value.add(this.get(i, k).multiply(that.get(k, j)));
 				}
-				temp.add(value);
+				newElements[i][j] = value;
 			}
-			newElements.add(temp);
 		}
-		if (rows == that.cols()) {
+		if (this.rows() == that.cols()) {
 			return new SquareMatrix<F>(newElements);
 		}
 		return new Matrix<F>(newElements);
@@ -182,13 +171,12 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 		if (this.transpose != null) {
 			return this.transpose;
 		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(cols);
-		for (int i = 0; i < cols; i++) {
-			ArrayList<F> temp = new ArrayList<F>(rows);
-			for (int j = 0; j < rows; j++) {
-				temp.add(this.get(j, i));
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[this.cols()][this.rows()];
+		for (int i = 0; i < this.cols(); i++) {
+			for (int j = 0; j < this.rows(); j++) {
+				newElements[i][j] = this.get(j, i);
 			}
-			newElements.add(temp);
 		}
 		this.transpose = new Matrix<F>(newElements);
 		return this.transpose;
@@ -196,8 +184,21 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Matrix<?>)) {
+			return false;
+		}
+		Matrix<?> that = (Matrix<?>) obj;
+		for (int i = 0; i < this.cols(); i++) {
+			for (int j = 0; j < this.rows(); j++) {
+				if (!this.get(i, j).equals(that.get(i, j))) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -229,20 +230,20 @@ public class Matrix<F extends Field<F>> implements VectorSpace<Matrix<F>, F>,
 				|| col >= cols) {
 			throw new IllegalArgumentException();
 		}
-		ArrayList<ArrayList<F>> newElements = new ArrayList<ArrayList<F>>(
-				rows - 1);
+		@SuppressWarnings("unchecked")
+		F[][] newElements = (F[][]) new Field[this.rows()-1][this.cols()-1];
 		for (int i = 0; i < rows; i++) {
 			if (i == row) {
 				continue;
 			}
-			ArrayList<F> temp = new ArrayList<F>(cols - 1);
+			int pi = i > row ? i-1 : i;
 			for (int j = 0; j < cols; j++) {
 				if (j == col) {
 					continue;
 				}
-				temp.add(get(i, j));
+				int pj = j > col ? j-1 : j;
+				newElements[pi][pj] = this.get(i, j);
 			}
-			newElements.add(temp);
 		}
 		if (rows == cols) {
 			return new SquareMatrix<F>(newElements);
