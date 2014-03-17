@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.7.1" created="2013-10-31 23:21" -->
+<!-- generator="WordPress/3.8.1" created="2014-03-17 12:28" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Understanding the Riemann Hypothesis</title>
 	<link>http://www.riemannhypothesis.info</link>
 	<description>Everything You Always Wanted to Know About Primes (But Were Afraid to Ask)</description>
-	<pubDate>Thu, 31 Oct 2013 23:21:05 +0000</pubDate>
+	<pubDate>Mon, 17 Mar 2014 12:28:25 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://www.riemannhypothesis.info</wp:base_site_url>
@@ -39,15 +39,30 @@
 
 	<wp:category><wp:term_id>3</wp:term_id><wp:category_nicename>euler-product</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Euler product]]></wp:cat_name></wp:category>
 	<wp:category><wp:term_id>8</wp:term_id><wp:category_nicename>functional-equation</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Functional Equation]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>9</wp:term_id><wp:category_nicename>probability</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Probability]]></wp:cat_name></wp:category>
 	<wp:category><wp:term_id>2</wp:term_id><wp:category_nicename>riemann</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Riemann]]></wp:cat_name></wp:category>
+	<wp:category><wp:term_id>17</wp:term_id><wp:category_nicename>riemanns-paper</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Riemann's Paper]]></wp:cat_name></wp:category>
 	<wp:category><wp:term_id>1</wp:term_id><wp:category_nicename>uncategorized</wp:category_nicename><wp:category_parent></wp:category_parent><wp:cat_name><![CDATA[Uncategorized]]></wp:cat_name></wp:category>
+	<wp:tag><wp:term_id>16</wp:term_id><wp:tag_slug>pacap-bpacdot-pb</wp:tag_slug><wp:tag_name><![CDATA[$$P(A\cap B)=P(A)\cdot P(B)$$]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>22</wp:term_id><wp:tag_slug>chebyshev</wp:tag_slug><wp:tag_name><![CDATA[Chebyshev]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>14</wp:term_id><wp:tag_slug>conjecture</wp:tag_slug><wp:tag_name><![CDATA[Conjecture]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>4</wp:term_id><wp:tag_slug>euler</wp:tag_slug><wp:tag_name><![CDATA[Euler]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>15</wp:term_id><wp:tag_slug>gauss</wp:tag_slug><wp:tag_name><![CDATA[Gauss]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>11</wp:term_id><wp:tag_slug>hardy</wp:tag_slug><wp:tag_name><![CDATA[Hardy]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>12</wp:term_id><wp:tag_slug>littlewood</wp:tag_slug><wp:tag_name><![CDATA[Littlewood]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>21</wp:term_id><wp:tag_slug>mobius-inversion</wp:tag_slug><wp:tag_name><![CDATA[Möbius inversion]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>20</wp:term_id><wp:tag_slug>polynomial</wp:tag_slug><wp:tag_name><![CDATA[Polynomial]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>13</wp:term_id><wp:tag_slug>prime-number-theorem</wp:tag_slug><wp:tag_name><![CDATA[Prime number theorem]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>5</wp:term_id><wp:tag_slug>primes</wp:tag_slug><wp:tag_name><![CDATA[Primes]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>9</wp:term_id><wp:tag_slug>probability</wp:tag_slug><wp:tag_name><![CDATA[Probability]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>7</wp:term_id><wp:tag_slug>product</wp:tag_slug><wp:tag_name><![CDATA[Product]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>2</wp:term_id><wp:tag_slug>riemann</wp:tag_slug><wp:tag_name><![CDATA[Riemann]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>6</wp:term_id><wp:tag_slug>series</wp:tag_slug><wp:tag_name><![CDATA[Series]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>18</wp:term_id><wp:tag_slug>symmetry</wp:tag_slug><wp:tag_name><![CDATA[Symmetry]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>10</wp:term_id><wp:tag_slug>twin-primes</wp:tag_slug><wp:tag_name><![CDATA[Twin primes]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>19</wp:term_id><wp:tag_slug>zeros</wp:tag_slug><wp:tag_name><![CDATA[Zeros]]></wp:tag_name></wp:tag>
 
-	<generator>http://wordpress.org/?v=3.7.1</generator>
+	<generator>http://wordpress.org/?v=3.8.1</generator>
 
 	<item>
 				<title>About</title>
@@ -182,6 +197,157 @@ Magic!]]></content:encoded>
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1381098457.0449231;s:7:"message";s:45:"Markus changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:6:"Markus";}]]></wp:meta_value>
 			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>78</wp:comment_id>
+			<wp:comment_author><![CDATA[Peter L. Griffiths]]></wp:comment_author>
+			<wp:comment_author_email>lowdith73@yahoo.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>46.65.1.8</wp:comment_author_IP>
+			<wp:comment_date>2013-11-30 17:44:51</wp:comment_date>
+			<wp:comment_date_gmt>2013-11-30 17:44:51</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Near the beginning of his 1859 paper Riemann incorrectly assumes that the complex variable s =(1/2) + ti is a zeta power.  Riemann fails to recognise that an expression containing an imaginary number such as (1/2) + ti cannot be a power unless the base is a log base such as e.  The best known example of this is Cotes's formula (not mentioned by Riemann), cosu + isinu equals e^(iu),  where it is not possible for e to be meaningfully replaced by other values,  also e^(1/2) X e^(iu) equals e^[(1/2) +iu].  This means that Riemann is badly wrong in applying as a power s = (1/2) +ti and in failing to recognise t as an angle.  It also means that practically all the arguments in his 1859 paper are fallacious.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1385833491.3105631;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1385895343.6209569;s:7:"message";s:45:"Markus changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:6:"Markus";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>86</wp:comment_id>
+			<wp:comment_author><![CDATA[Markus Schepke]]></wp:comment_author>
+			<wp:comment_author_email>mk.schepke@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>http://www.riemannhypothesis.info</wp:comment_author_url>
+			<wp:comment_author_IP>90.213.131.192</wp:comment_author_IP>
+			<wp:comment_date>2013-12-01 16:48:56</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-01 16:48:56</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Nice to read a comment here, though I fail to follow through as well as to see the connection to this particular post, particularly since every statement of Riemann's paper has been thoroughly scrutinised and (save the RH) rigorously proved afterwards. Can you elaborate?]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>78</wp:comment_parent>
+			<wp:comment_user_id>1</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1385916536.5347421;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:6:"Markus";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>100</wp:comment_id>
+			<wp:comment_author><![CDATA[Peter L. Griffiths]]></wp:comment_author>
+			<wp:comment_author_email>lowdith73@yahoo.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>46.65.1.57</wp:comment_author_IP>
+			<wp:comment_date>2013-12-05 13:45:06</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-05 13:45:06</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Unlike the individuals referred to in Marcus Schepke's comment, I am not and never have been a professional academic.  This means that I can reach conclusions based on mathematical rules such as Cotes's formula which the professionals have overlooked and certainly not scrutinised.  I have done something similar to Fermat's Last Theorem but this takes just over 400 words, and should be published In April 2014.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1386251106.530813;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>127</wp:comment_id>
+			<wp:comment_author><![CDATA[Markus Schepke]]></wp:comment_author>
+			<wp:comment_author_email>mk.schepke@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>http://www.riemannhypothesis.info</wp:comment_author_url>
+			<wp:comment_author_IP>90.219.17.73</wp:comment_author_IP>
+			<wp:comment_date>2013-12-11 13:57:16</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-11 13:57:16</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I'd be indeed interested to read this - I hope you will keep me posted? Particularly interesting would be to hear about Cotes's formula since I couldn't find any reference to this whatsoever. Is there any chance you can give us a preview on this?]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>100</wp:comment_parent>
+			<wp:comment_user_id>1</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1386770236.666611;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:6:"Markus";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>129</wp:comment_id>
+			<wp:comment_author><![CDATA[Peter L. Griffiths]]></wp:comment_author>
+			<wp:comment_author_email>lowdith73@yahoo.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>46.65.1.57</wp:comment_author_IP>
+			<wp:comment_date>2013-12-11 17:54:33</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-11 17:54:33</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Cotes's fomula can be constructed by bringing together the infinite series for sines, the infinite series for cosines and the infinite series for antilog e discovered by Isaac Newton in his epistola posterior 1676.  The inability of e to be replaced by any other value when it has a complex power is my own invention.  As also is the fact that the coefficient of i has to be an angle.   The same also applies to -1 equals e^[(PI). i].  In the literature on the Riemann hypothesis the only slightly erroneous reference to Cotes's formula I can find is on page 124 of H.M. Edwards's book.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1386784473.550787;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>149</wp:comment_id>
+			<wp:comment_author><![CDATA[Peter L. Griffiths]]></wp:comment_author>
+			<wp:comment_author_email>lowdith73@yahoo.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>46.65.1.57</wp:comment_author_IP>
+			<wp:comment_date>2013-12-17 17:43:29</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-17 17:43:29</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Further to my comment of 11 December 2013,  I ought to clarify my observation  about the inability of e being replaced by any other value.  I now consider that  it is possible for e to be replaced by other values but only because the general formula for any variable base n and power u should be the 
+constant n^(u/logn).  When n equals e,  log n will be clearly 1.   The fact that n^(t/logn) has to be a constant particularly when applied to i that is n^(ti/logn)  undermines virtually all the arguments in Riemann's 1859 paper.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1387302209.4308579;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>185</wp:comment_id>
+			<wp:comment_author><![CDATA[Peter L. Griffiths]]></wp:comment_author>
+			<wp:comment_author_email>lowdith73@yahoo.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>46.65.1.8</wp:comment_author_IP>
+			<wp:comment_date>2014-01-04 18:15:05</wp:comment_date>
+			<wp:comment_date_gmt>2014-01-04 18:15:05</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[A simpler explanation of my comment of 17 December 2013 is that antilog e can be expressed as n^(1/logn) whatever the value of n.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
 		</wp:comment>
 	</item>
 	<item>
@@ -429,6 +595,7 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 		<content:encoded><![CDATA[<ul>
 	<li>★★★★☆ <a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0007214626/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0007214626&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>Finding Moonshine</em></a> by <strong>Marcus du Sautoy</strong></li>
 	<li>★★★★☆ <a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0007309864/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0007309864&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>The Number Mysteries</em></a> by <strong>Marcus du Sautoy</strong></li>
+	<li>★★★★★ <a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0571205119/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0571205119&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>Uncle Petros and Goldbach's Conjecture</em></a> by <strong>Apostolos Doxiadis</strong></li>
 </ul>]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>72</wp:post_id>
@@ -446,6 +613,10 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -485,6 +656,7 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 	<li>★★★★☆ <a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/1848313012/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=1848313012&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>Perfect Rigour</em></a> by <strong>Masha Gessen</strong></li>
 	<li>★★★☆☆ <a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/1857028295/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=1857028295&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>The Man Who Loved Only Numbers</em></a> by <strong>Paul Hoffman</strong></li>
 	<li><a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0349104522/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0349104522&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em> The Man Who Knew Infinity</em></a> by <strong>Robert Kanigel</strong></li>
+	<li><a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0099116413/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0099116413&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>Alan Turing: The Enigma</em></a> by <strong>Andrew Hodges</strong></li>
 </ul>]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>81</wp:post_id>
@@ -503,6 +675,10 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 				<title>Mathematical Textbooks</title>
@@ -511,7 +687,9 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 		<dc:creator><![CDATA[Markus]]></dc:creator>
 		<guid isPermaLink="false">http://www.riemannhypothesis.info/?page_id=83</guid>
 		<description></description>
-		<content:encoded><![CDATA[Coming soon...]]></content:encoded>
+		<content:encoded><![CDATA[<ul>
+	<li><a title="Buy the book on amazon.co.uk" href="http://www.amazon.co.uk/gp/product/0199219869/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0199219869&amp;linkCode=as2&amp;tag=riemannhypo-21" target="_blank"><em>An Introduction to the Theory of Numbers</em></a> by <strong>G. H. Hardy</strong> and <strong>E. M. Wright</strong></li>
+</ul>]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>83</wp:post_id>
 		<wp:post_date>2013-10-09 18:25:06</wp:post_date>
@@ -528,6 +706,10 @@ OK, enough of the technicalities, I promise we won't bother too much with these 
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -563,7 +745,7 @@ In other words, if we want to know a value of $$\zeta(s)$$ for $$0&lt;\Re s&lt;1
 
 Now let's take a look at all the different factors. First, $$2^{1-s}\pi^{-s}$$ is very harmless, these are exponential functions, no zeros, no poles, very well-behaved. Next, $$\cos(\pi s/2)$$ is the equally well-known cosine function, one of the fundamental trigonometric functions. It is analytic with simple zeros for $$\pi s/2=\pi(k+1/2)$$ with $$k\in\mathbb{Z}$$, that is, $$s=2k+1$$, in other words for $$s$$ odd, positive or negative.
 
-The function $$\Pi(s-1)$$ is lesser known, though this is partially due to my notation. It's better known as $$\Gamma(s)$$, and is an analytic version of the factorial function. That is, it satisfies the functional equation $$\Pi(s)=s\Pi(s-1)$$. Together with $$\Pi(0)=1$$, this implies $$\Pi(n)=n!$$ for all non-negative integers $$n$$. For obscure reasons, Adrien-Marie Legendre favoured the use of $$\Gamma(s)=\Pi(s-1)$$ which in turn satisfies the far less catchy $$\Gamma(n)=(n-1)!$$. With Carl Friedrich Gauss, Bernhard Riemann, Harold Edwards, and John Derbyshire virtually all my primary sources use the $$\Pi(s)$$ notation for the factorial function, so I don't even need to resort to my healthy francophobia in order to resent the $$\Gamma(s)$$ notation. On the mathematical side, the factorial function is a holomorphic function, i.e., analytic except for simple poles at the negative integers $$s=-1,-2,-3,\ldots$$ without zeros. So the factor $$\Pi(s-1)$$ contributes no zeros, but poles at $$s=0,-1,-2,\ldots$$.
+The function $$\Pi(s-1)$$ is lesser known, though this is partially due to my notation. It's better known as $$\Gamma(s)$$, and is an analytic version of the factorial ((I cannot resist to tell an anecdote from my time in Cambridge: I was giving a talk on prime generating functions, most of which involved heavy use of factorials. Unfortunately, throughout the entire talk I followed my German instincts and referred to them as <em>faculties</em>. I really wish someone would have had the courage to correct my mistake during the talk instead of politely ignoring it...)) function. That is, it satisfies the functional equation $$\Pi(s)=s\Pi(s-1)$$. Together with $$\Pi(0)=1$$, this implies $$ \Pi(n)=n! $$ for all non-negative integers $$n$$. For obscure reasons, Adrien-Marie Legendre favoured the use of $$\Gamma(s)=\Pi(s-1)$$ which in turn satisfies the far less catchy $$\Gamma(n)=(n-1)! $$. With Carl Friedrich Gauss ((Gauss is not really one of my sources in this case, but considering his importance to mathematics in general, and the topics in question in particular, you couldn't wish for a stronger testimonial.)), Bernhard Riemann, Harold Edwards, and John Derbyshire virtually all my primary sources use the $$\Pi(s)$$ notation for the factorial function, so I don't even need to resort to my healthy francophobia in order to resent the $$\Gamma(s)$$ notation. On the mathematical side, the factorial function is a holomorphic function, i.e., analytic except for simple poles at the negative integers $$s=-1,-2,-3,\ldots$$ without zeros. So the factor $$\Pi(s-1)$$ contributes no zeros, but poles at $$s=0,-1,-2,\ldots$$.
 
 Which brings us back to $$\zeta(s)$$. So far, we only understand the half-plane $$\Re s&gt;1$$ where $$\zeta(s)$$ is analytic and has no zeros because of the Euler product. Further, it has a (simple) pole at $$s=1$$ as the defining series of $$\zeta(s)$$ then becomes the harmonic series. As it turns out, this poles is simple as well.
 
@@ -592,6 +774,371 @@ It has zeros for the negative even numbers $$s=-2,-4,-6,\ldots$$ which are so un
 		<wp:post_password></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 		<category domain="category" nicename="functional-equation"><![CDATA[Functional Equation]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Are Primes Independent?</title>
+		<link>http://www.riemannhypothesis.info/?p=129</link>
+		<pubDate>Sun, 24 Nov 2013 14:32:23 +0000</pubDate>
+		<dc:creator><![CDATA[Markus]]></dc:creator>
+		<guid isPermaLink="false">http://www.riemannhypothesis.info/?p=129</guid>
+		<description></description>
+		<content:encoded><![CDATA[The question may sound silly, but I hope it will become apparent that it's very reasonable to ask. What we will examine here is the <em>probabilistic interpretation</em> of the prime distribution. So, essentially we ask: "What's the probability that a randomly chosen number is prime?" Those familiar with some basic probability theory know the notion of independency in this context, so the question I'm basically interested in here is if the probability to find a prime is independent of the preceding or following numbers. This post is a little out of the regular narrative, but it's something I have been thinking about recently, and I think it makes a cute article.
+
+But one step back. First consider the following problem: We pick a number $$X$$ not exceeding some (large) $$n$$ at random. What are the odds this number is prime? Well, this is a classic example of a discrete probability, so the answer is <em>positive cases over all cases</em>, i.e.,
+
+$$!P(X\in\mathbb{P})=\frac{\pi(n)}{n},$$
+
+where $$\mathbb{P}$$ denotes the set of all primes, and $$\pi(n)$$ is the prime counting function, i.e., the number of primes not exceeding $$n$$. Now, the famous Prime Number Theorem states that we can approximate $$\pi(n)$$ with the elementary function
+
+$$!\pi(n)\sim\frac{n}{\log n}.$$
+
+Don't worry too much about the exact meaning of the tilde, we will have plenty of opportunity to examine it further. For now just read it as "the left-hand side behaves similarly to the right-hand side". Now we can substitute this approximation in the calculation of the probability above, and obtain
+
+$$!P(X\in\mathbb{P})\sim\frac{n/\log n}{n}=\frac{1}{\log n}.$$<!--more-->
+
+In other words, a randomly chosen number between $$1$$ and $$n$$ is prime with probability roughly $$1/\log n$$. What's more, we can even justify saying that a number "around a large $$n$$" is prime with probability $$1/\log n$$. To illustrate, take $$10^{100}$$, a $$1$$ followed by 100 zeros. (And that is still a small number in the context of number theory.) Below it, there are of course plenty of numbers with 98 digits or less, but obviously 90% of the numbers up to $$10^{100}$$ have 99 digits. This means that the vast majority of the weight in the above probability lies on these numbers, justifying the statement.
+
+In fact, we can see that we're right in interpreting $$1/\log n$$ as the probability that $$n$$ is prime in a much more rigorous way. In the terms of probability theory, it means that $$1/\log n$$ is something like the density function associated with our experiment. (Actually, it would need to be normalised, but let's not concern ourselves with that.) So, in order to get the number of all primes up to $$n$$, we would need to sum up all these weights. Since we have a continuous function, we use the integral instead, and arrive at another estimate
+
+$$!\pi(n)\sim\int_2^n\frac{dx}{\log x}.$$
+
+The function on the right-hand side is known as $$\mathrm{Li}(n)$$, and was already examined by Gauss. The two approximations $$n/\log n$$ and $$\mathrm{Li}(n)$$ for $$\pi(n)$$ are in a certain sense equivalent (just do a partial integration, if you're curious), but as it turns out, $$\mathrm{Li}(n)$$ is empirically more accurate, predicting the distribution of primes with very small relative errors.
+
+But I've gone astray a little. We wanted to know if primes are independent. Well, you may point out that obviously they're not: if $$X$$ is a (large) prime, then it is odd, so $$X+1$$ is even and hence composite. But $$X+2$$ may be prime, and indeed there is an abundance of examples where both $$X$$ and $$X+2$$ are prime. These are called <em>twin primes</em>, and it is an open question if there are infinitely many of them. (Most mathematician would believe so, and we will make use of one more qualified conjecture in just a moment.)
+
+After examining "single" primes, we may now ask how many many twin primes there are less than a given number. This number is usually denoted by $$\pi_2(n)$$. What we are interested in for this article is the question: <em>What is the probability that $$X+2$$ is prime if we already know that $$X$$ is prime?</em> Mathematically speaking, we want to calculate (or at least estimate) the conditional probability $$P(X+2\in\mathbb{P}|X\in\mathbb{P})$$.
+
+Two events $$A$$ and $$B$$ are said to be (stochastically) independent if $$P(A|B)=P(A)$$, or in other words, if knowledge about event $$B$$ yields no further information about event $$A$$. ((This is not quite the accurate definition, but it's the intuition behind it. Correctly, A and B are independent iff P(A and B) = P(A) P(B).))
+
+Now, by just applying the definition of how to calculate a conditional probability above, we obtain
+
+$$!P(X+2\in\mathbb{P}|X\in\mathbb{P})=\frac{P(X,X+2\in\mathbb{P})}{P(X\in\mathbb{P})}.$$
+
+But the numerator is just the probability that we found a twin prime pair, and the denominator we already examined. This yields
+
+$$!P(X+2\in\mathbb{P}|X\in\mathbb{P})=\frac{\pi_2(n)/n}{\pi(n)/n}=\frac{\pi_2(n)}{\pi(n)}.$$
+
+We could affirm the above question about independence if $$P(X+2\in\mathbb{P}|X\in\mathbb{P})$$ would equal $$P(X+2\in\mathbb{P})$$, or behave as $$1/\log n$$ as well. Given our last equation, this would be the case if could approximate $$\pi_2(n)$$ by $$n/(\log n)^2$$. Indeed, Hardy and Littlewood conjectured for the distribution of twin primes
+
+$$!\pi_2(n)\sim C\frac{n}{(\log n)^2}.$$
+
+This is well supported by calculations, but still far from being proved. But let's assume for a minute that this is accurate, then it yields the approximation
+
+$$!P(X+2\in\mathbb{P}|X\in\mathbb{P})\sim\frac{Cn/(\log n)^2}{n/\log n}=\frac{C}{\log n}.$$
+
+So the primes would indeed be independent if the constant $$C$$ would have value $$1$$. When I first research this, I got quite excited, as most often the value for $$C$$ would be given as $$1.32032\ldots$$. This would mean that the two events would not be independent, but indeed it would be <em>more</em> likely to find a prime two spots after another one than at a random spot! In other words, primes would have a strong tendency to cluster together.
+
+But alas, I misread the data. I have been sloppy in defining $$\pi_2(n)$$ above, and so are most sources. What's usually counted is the total number of primes of the form $$n$$ and $$n+2$$, but we are only interested in the number of <em>pairs</em>. So indeed we need to cut the constant in half. More concretely, the conjectured constant is the <em>twin prime constant</em>
+
+$$!C=\prod_{p\ge 3}\frac{p(p-2)}{(p-1)^2}\approx0.66016 18158 46869 57392 78121 10014\dots$$
+
+This means the answer is <em>no</em>, primes are not independent. The probability of finding a prime two spots after another one is (conjectured to be)
+
+$$!P(X+2\in\mathbb{P}|X\in\mathbb{P})\sim0.66016P(X\in\mathbb{P}).$$
+
+Well, would have been too good to be true...]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>129</wp:post_id>
+		<wp:post_date>2013-11-24 14:32:23</wp:post_date>
+		<wp:post_date_gmt>2013-11-24 14:32:23</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>are-primes-independent</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="conjecture"><![CDATA[Conjecture]]></category>
+		<category domain="post_tag" nicename="gauss"><![CDATA[Gauss]]></category>
+		<category domain="post_tag" nicename="hardy"><![CDATA[Hardy]]></category>
+		<category domain="post_tag" nicename="littlewood"><![CDATA[Littlewood]]></category>
+		<category domain="post_tag" nicename="prime-number-theorem"><![CDATA[Prime number theorem]]></category>
+		<category domain="category" nicename="probability"><![CDATA[Probability]]></category>
+		<category domain="post_tag" nicename="probability"><![CDATA[Probability]]></category>
+		<category domain="post_tag" nicename="twin-primes"><![CDATA[Twin primes]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>More symmetry and Another Product</title>
+		<link>http://www.riemannhypothesis.info/?p=153</link>
+		<pubDate>Sun, 01 Dec 2013 21:29:17 +0000</pubDate>
+		<dc:creator><![CDATA[Markus]]></dc:creator>
+		<guid isPermaLink="false">http://www.riemannhypothesis.info/?p=153</guid>
+		<description></description>
+		<content:encoded><![CDATA[We've <a title="Perfect Symmetry" href="http://www.riemannhypothesis.info/?p=93">seen</a> that $$\zeta(s)$$ satisfies the functional equation
+
+$$!\zeta(1-s)=2^{1-s}\pi^{-s}\cos(\pi s/2)\Pi(s-1)\zeta(s).$$
+
+(Well, it still needs to be proved, but let's just assume it's correct for now.) The goal of this post is an even more symmetrical form that will yield the function $$\xi(s)$$ which we can develop into an incredibly useful product expression.
+
+On our wish list for $$\xi(s)$$ we find three items:
+<ol>
+	<li>It's  an <em>entire function</em>, i.e., a function that's holomorphic everywhere in $$\mathbb{C}$$ without any poles.</li>
+	<li>It has zeros for all non-trivial zeros of the $$\zeta$$-function, and no others.</li>
+	<li>It's perfectly symmetrical along the critical line, i.e., it satisfies $$\xi(1-s)=\xi(s)$$.</li>
+</ol>
+<!--more-->
+The first two requirements are fairly easy to satisfy. To make $$\zeta(s)$$ holomorphic, we just need to cancel out its single simple pole at $$s=1$$ by multiplying $$s-1$$. Keeping in mind the desired symmetry, we also multiply a factor $$s$$. To get rid of the trivial zeros $$s=-2,-4,-6,\ldots$$, plus the one we just introduced at $$s=0$$, we need to multiply by a function that has (simple) poles at exactly these points, and no zeros. From the functional equation, we know that the factorial function $$\Pi(s)$$ is a pretty good candidate, which has no zeros, but poles for $$s=-1,-2,-3,\ldots$$. So $$\Pi(s/2)$$ has poles at $$s=-2,-4,-6,\ldots$$, and $$\Pi(s/2-1)$$ has poles at $$s=0,-2,-4,\ldots$$, perfectly covering all the zeros we needed eliminated without introducing new ones. This leads us to
+
+$$!\xi(s)=\zeta(s)s(s-1)\Pi(s/2-1)\hat{\xi}(s),$$
+
+where $$\hat{\xi}(s)$$ is just a placeholder for other factors that may be necessary achieve requirement 3, the symmetry around the critical line. We are free to choose anything for $$\hat{\xi}(s)$$ as long as it does not interfere with the other two requirements, i.e., it cannot have zeros or poles. (Spoiler alert: Pretty much the only entire functions satisfying this are constant and exponential functions, and that's exactly what we will need.)
+
+I won't try to create any further tension as we're almost there (and I suck at it anyway). Indeed, Riemann found the integral expression
+
+$$!\pi^{-s/2}\Pi(s/2-1)\zeta(s)=-\frac{1}{s(1-s)}+\int_1^\infty\left(x^{s/2-1}+x^{-s-1/2}\right)\psi(x)dx,$$
+
+where
+
+$$!\psi(x)=\sum_{n=1}^\infty e^{-\pi n^2 x}$$
+
+is the exponential sum. I won't go into the details, but it is now obvious that the right-hand side is unchanged when you substitute $$s$$ by $$1-s$$. In other words, if we define ((The factor 1/2 has just been introduced to make certain calculations more convenient.))
+
+$$!\xi(s)=\frac{1}{2}\pi^{-s/2}s(s-1)\Pi(s/2-1)\zeta(s)$$
+
+we have found a function that satisfies all three requirements. Eureka!
+
+So, why did we jump through all these hoops? I promised a nice product representation for $$\xi(s)$$, and we're now in the position to get cracking. More specifically, it's high time the zeros entered the scene!
+
+Representing a function through a product over their zeros is a pretty common idea. Take, for instance, a polynomial function $$p(s)$$ of degree, say, $$d$$ with zeros $$\varrho_1,\ldots,\varrho_d$$. (Of course we are all aware of the fundamental theorem of algebra which ensures that every polynomial of degree $$d$$ has exactly $$d$$ zeros over the complex numbers, right?) Now, consider the expression
+
+$$!\hat{p}(s)=p(0)\prod_{n=1}^d\left(1-\frac{s}{\varrho_n}\right).$$
+
+For $$s=0$$, all factors are $$1$$, so $$\hat{p}(0)=p(0)$$. Further, if $$s=\varrho_i$$, i.e., one of the zeros, then the corresponding factor is $$0$$, and hence the whole product, as is the polynomial at this point, so $$\hat{p}(\varrho_i)=p(\varrho_i)$$. Now, we found an expression that corresponds to our polynomial in $$d+1$$ points (the $$d$$ zeros and the origin). Since the polynomial has $$d+1$$ degrees of freedom (the $$d+1$$ coefficients of the polynomial), it is completely determined by these points, and hence must correspond to our expression: $$\hat{p}(s)=p(s)$$ for all $$s$$. (In all I've just said I implicitly assumed the zeros to be simple, and $$p(0)\neq0$$, but these are just technical obstacles.)
+
+Why shouldn't the same hold for infinitely many zeros? Holomorphic function are really just polynomials of infinite degree, so we would expect an expression like
+
+$$!\xi(s)=\xi(0)\prod_\varrho\left(1-\frac{s}{\varrho}\right),$$
+
+where the product runs over all the zeros of $$\xi(s)$$ which, by our construction, are exactly the non-trivial zeros of $$\zeta(s)$$. Of course, this argumentation is all very vague, and for the above expression to be correct, we at the very least need convergence of the product. As an additional obstacle, the product converges only converges conditionally, i.e., the convergence depends on the ordering of the zeros. It turns out the "right" ordering is to pair every zero $$\varrho$$ with the mirrored $$1-\varrho$$. Recalling what we learnt <a title="Does the Euler Product Converge?" href="http://www.riemannhypothesis.info/?p=45">earlier</a>, it suffices then to prove that $$\sum_{\Im\varrho&gt;0}1/|\varrho(1-\varrho)|$$ converges.
+
+Riemann states in his paper (though he makes no attempt to prove it, so neither shall I feel under any obligation to do so) that the number of zeros of $$\zeta(s)$$ (or $$\xi(s)$$, if you prefer) in the critical strip with imaginary part between $$0$$ and $$T$$ is approximately
+
+$$!\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}.$$
+
+This implies, very roughly, that the $$n$$th zero has modulus about $$n/\log n$$, so the above sum behaves similar to $$\sum(\log n)^2/n^2$$ which indeed converges, and hence the product does.
+
+There's a lot of hand-waving and unproved arguments in this article, some of which we may return to, some which we just leave as it is. But one conclusion will hopefully stick: We have the functions $$\zeta(s)$$ and $$\xi(s)$$ (which are essentially the same for all we are concerned about), and represented them as two products, one over the prime numbers, and one over the zeros in the critical strip. This intrinsically links these two together! We will go on to use the zeros to calculate primes, both approximately and exactly.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>153</wp:post_id>
+		<wp:post_date>2013-12-01 21:29:17</wp:post_date>
+		<wp:post_date_gmt>2013-12-01 21:29:17</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>more-symmetry-and-another-product</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="polynomial"><![CDATA[Polynomial]]></category>
+		<category domain="post_tag" nicename="product"><![CDATA[Product]]></category>
+		<category domain="category" nicename="riemanns-paper"><![CDATA[Riemann's Paper]]></category>
+		<category domain="post_tag" nicename="symmetry"><![CDATA[Symmetry]]></category>
+		<category domain="post_tag" nicename="zeros"><![CDATA[Zeros]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Counting Primes Functionally</title>
+		<link>http://www.riemannhypothesis.info/?p=180</link>
+		<pubDate>Sun, 12 Jan 2014 11:31:23 +0000</pubDate>
+		<dc:creator><![CDATA[Markus]]></dc:creator>
+		<guid isPermaLink="false">http://www.riemannhypothesis.info/?p=180</guid>
+		<description></description>
+		<content:encoded><![CDATA[After all this playing with the $$\zeta$$-function it is time to return to the overall objective of this whole exercise: counting prime numbers. The idea behind analytic number theory is that primes are unpredictable on the small scale, but actually surprising regular on the large scale. This is why we'll look at certain functions that behave pretty erratically when we look at every single value, but become smooth and "easy" to calculate once we "zoom out" and consider the global properties, the so-called asymptotic.<!--more-->
+
+I've mentioned the function $$\pi(x)$$ before which is defined as the number of primes not exceeding some real $$x$$. (Never mind the overloading of the symbol $$\pi$$ for different and completely unrelated functions, constants, etc. It's been like that for ever, and always will be. Mathematicians are pretty stubborn.) If we can calculate $$\pi(x)$$ exactly, we would have perfect information about the primes since the function counts the primes exactly. Theoretically. But as mentioned before, we are only interested in capturing the overall behaviour, forgetting "local" irregularities.
+
+So, how does $$\pi(x)$$ look like? Most of the time, it is just a flat line for most of the values when the count does not change as they are not primes. At every prime value it jumps up by one step. That's it.
+
+<a href="http://www.riemannhypothesis.info/wp-content/uploads/2014/01/500px-PrimePi.svg_.png"><img class="aligncenter size-medium wp-image-181" alt="Prime Counting Function" src="http://www.riemannhypothesis.info/wp-content/uploads/2014/01/500px-PrimePi.svg_-300x193.png" width="300" height="193" /></a>
+
+Well, almost. It turns out that it's convenient to define the value of $$\pi(x)$$ for primes as "half the step", i.e., the value of $$\pi(4.9)$$ would be $$2$$, $$\pi(5)$$ is $$2.5$$, and $$\pi(5.1)$$ then takes the value $$3$$. It doesn't matter asymptotically, but the arguments that follow will go more smoothly. Yet, this is quite inconvenient to write out every time, so I will drop it for most of time, but always implicitly assume that functions at values where the argument jumps are "smoothed out".
+
+It is usually interesting to look at the density of a certain sequence, i.e., the proportion of all integers that are members of that sequence. In this case it means calculating $$\pi(x)/x$$. But already quite elementary arguments are sufficient to show that this value tends to zero. In other word, the density of the primes is zero. Now, in order to obtain a function that behaves more like $$x$$ we need to give the primes a sufficient weight. It is the nature of the Prime Number Theorem that the $$n$$th prime is about $$n\log n$$. This means that we need to give each prime weight $$\log n$$ to obtain a function that behaves like $$x$$. This function was first introduced by Pafnuty Chebyshev, is usually called $$\vartheta(x)$$, and formally defined as $$\vartheta(x):=\sum\log p$$, where the sum runs over all primes not exceeding $$x$$. Just for the sake of completeness, I will mention the closely related function $$\psi(x)$$ that gives weight $$\log p$$ not only to primes, but also to prime powers $$p^n$$.
+
+Both functions $$\vartheta(x)$$ and $$\psi(x)$$ may seem a little artificial at first glance, but they are in fact very natural in the context of counting primes. It is probably best depicted by the fact that the Prime Number Theorem $$\pi(x)\sim x/\log x$$ is equivalent to $$\vartheta(x)\sim x$$ and $$\psi(x)\sim x$$.  This relates to my earlier comment that we assign a certain weight to the primes in order to obtain a function with a positive density. Many equations including prime counting functions become more concise by writing them in terms of $$\vartheta(x)$$ instead of $$\pi(x)$$.
+
+To confuse things even further, we will need yet another prime counting function for our purposes. It is usually denoted $$J(x)$$ and counts all the primes below $$x$$ plus <em>half</em> the prime squares plus a <em>third</em> of the prime cubes etc. How many numbers below $$x$$ are the perfect square of a prime? It may sound tricky to count these, but it's quite easy if we approach the problem from the other direction: How do we generate all prime squares not exceeding $$x$$? Well, we go through all the primes and take their square. We stop as soon as $$p^2$$ exceeds $$x$$. In other words, we can generate a prime square for every prime below $$\sqrt{x}$$. And here's our answer! There are $$\pi(\sqrt{x})$$ prime squares not exceeding $$x$$. The same argument goes for cubes and higher powers. This gives us a neat formula for $$J(x)$$:
+
+$$!J(x):=\sum_{n\ge1}\frac{1}{n}\pi(x^{1/n}).$$
+
+It is worth noting that this is actually a finite series. No matter how large you choose $$x$$, the value $$x^{1/n}$$ will get smaller as the $$n$$ in the series increases, and will eventually drop below $$2$$. Since there are no primes smaller than $$2$$, the value of $$\pi(x^{1/n})$$ for that $$n$$ and all subsequent ones will be zero, effectively terminating the sum.
+
+The cool thing is that we can get the value of $$\pi(x)$$ back from $$J(x)$$ through a technique called <em>Möbius inversion</em>. It is actually not too difficult but slightly out of scope here, so let's be content for now that we can invert certain sums by means of the so-called Möbius function $$\mu(n)$$. This and similar inversion techniques would deserve an article on their own right, but for now without further ado, this is the inverted formula:
+
+$$!\pi(x)=\sum_{n\geq1}\frac{\mu(n)}{n}J(x^{1/n}).$$
+
+You may think: Big whoop! We wrote down a much more complicated function, just to find another complicated expression to get our initial object of study back, but haven't learnt anything new. The great news is that we can calculate $$J(x)$$ to any precision we care with the aid of the $$\zeta$$-function and its zeros.
+
+But that's the subject of the next article. (Am I getting better at my cliffhangers?)]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>180</wp:post_id>
+		<wp:post_date>2014-01-12 11:31:23</wp:post_date>
+		<wp:post_date_gmt>2014-01-12 11:31:23</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>counting-primes-functionally</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="chebyshev"><![CDATA[Chebyshev]]></category>
+		<category domain="post_tag" nicename="mobius-inversion"><![CDATA[Möbius inversion]]></category>
+		<category domain="category" nicename="riemanns-paper"><![CDATA[Riemann's Paper]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Prime Counting Function</title>
+		<link>http://www.riemannhypothesis.info/?attachment_id=181</link>
+		<pubDate>Sun, 05 Jan 2014 22:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Markus]]></dc:creator>
+		<guid isPermaLink="false">http://www.riemannhypothesis.info/wp-content/uploads/2014/01/500px-PrimePi.svg_.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>181</wp:post_id>
+		<wp:post_date>2014-01-05 22:45:56</wp:post_date>
+		<wp:post_date_gmt>2014-01-05 22:45:56</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>500px-primepi-svg</wp:post_name>
+		<wp:status>inherit</wp:status>
+		<wp:post_parent>180</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>attachment</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url>http://www.riemannhypothesis.info/wp-content/uploads/2014/01/500px-PrimePi.svg_.png</wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key>_wp_attached_file</wp:meta_key>
+			<wp:meta_value><![CDATA[2014/01/500px-PrimePi.svg_.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wp_attachment_metadata</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:500;s:6:"height";i:322;s:4:"file";s:30:"2014/01/500px-PrimePi.svg_.png";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:30:"500px-PrimePi.svg_-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:30:"500px-PrimePi.svg_-300x193.png";s:5:"width";i:300;s:6:"height";i:193;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Infinity Is Worth No More Than -1/12</title>
+		<link>http://www.riemannhypothesis.info/?p=200</link>
+		<pubDate>Sun, 23 Feb 2014 10:38:53 +0000</pubDate>
+		<dc:creator><![CDATA[Markus]]></dc:creator>
+		<guid isPermaLink="false">http://www.riemannhypothesis.info/?p=200</guid>
+		<description></description>
+		<content:encoded><![CDATA[On 16 January 1913, a confused manuscript reached the famous mathematician G. H. Hardy in Cambridge. Other researchers have received similar letters before, and rejected it due to the seemingly incoherent formulae mixed with trivial mathematical results. Professional mathematicians are used to receiving manuscripts by amateurs who believe to have solved famous problems, but this particularly odd scribble caught the eye:
+
+$$!1+2+3+4+5+6+\ldots+\infty=-\frac{1}{12}$$
+
+Did this amateur mathematician really think that the sum of all natural numbers, a value that will exceed any given boundary at some point, will wind up being a negative fraction? M. J. M. Hill of the University College, London, simply responded that the author must have fallen victim to the pitfalls of divergent series and referred him to a standard textbook on the topic.
+
+So, was this really just the work of a lunatic? Well, recently, the <a href="http://www.nytimes.com/2014/02/04/science/in-the-end-it-all-adds-up-to.html" target="_blank">New York Times</a> covered the topic, linking a <a href="http://www.numberphile.com/videos/analytical_continuation1.html" target="_blank">video</a> in which two physicists explain the importance of this result in modern string theory. While many physicists may not be too far from lunatics, these two make a pretty strong argument in this case:<!--more-->
+
+We will start with a different sum $$S_1$$ which just adds ones and subtracts them again:
+
+$$!S_1=1-1+1-1+1-1\pm\ldots$$
+
+What's the value of this infinite sum? If you stop at an odd position, you will get $$1$$, but if you move on to next even position, it will be back to $$0$$. This will continue for ever and ever, so the value of the sum will alternate between $$0$$ and $$1$$. It seems like these two values fight to dominate the sum, but the answer is surprisingly Solomonian: $$\frac{1}{2}$$. Here's why: We subtract the sum from $$1$$ and see what happens:
+
+$$!\begin{align}1-S_1&=1-(1-1+1-1+1-1\pm\ldots)\nonumber\\&=1-1+1-1+1-1+1\mp\ldots\nonumber\end{align}$$
+
+But this is just the original sum again! Hence, we just found the simple relationship
+
+$$!1-S_1=S_1$$
+
+which we can solve easily to $$S_1=\frac{1}{2}$$. ((For the record, this sum is also know as <a href="http://en.wikipedia.org/wiki/Grandi%27s_series" target="_blank">Grandi's series</a>.)) If you think this was weird, just wait for it.
+
+Next, we'll look at a sum that also involves all natural numbers, but we use them alternating as in $$S_1$$. This sum is
+
+$$!S_2=1-2+3-4+5-6\pm\ldots$$
+
+What we will do now is add the sum to itself, obtaining $$2S_2$$. But when we add the two, we will shift the second sum by one position. See what happens:
+
+$$!\begin{align}2S_2&=1-2+3-4+5-6\pm\ldots\nonumber\\&\qquad+1-2+3-4+5\mp\ldots\nonumber\\&=1-1+1-1+1-1+1\mp\ldots\nonumber\end{align}$$
+
+At this point you probably scream out: But that's just $$S_1$$ again! Just like magic, we ended up with a value that we already know:
+
+$$!2S_2=S_1=\frac{1}{2}$$
+
+which directly yields $$S_2=\frac{1}{4}$$. Cool! Now, we're only one step away from unraveling the mystery sum. What we do now is subtract our new friend $$S_2$$ from our original sum which we shall call for short $$S=1+2+3+4+\ldots$$:
+
+$$!\begin{align}S-S_2&=1+2+3+4+5+\ \ 6+7+\ \ 8+\ldots\nonumber\\&\,-1+2-3+4-5+\ \ 6-7+\ \ 8\mp\ldots\nonumber\\&=0+4+0+8+0+12+0+16+\ldots\nonumber\end{align}$$
+
+So we end up with $$4+8+12+16+\ldots$$ We notice that all summands are a multiple of $$4$$, so we can take that out of the sum, and obtain:
+
+$$!S-S_2=4(1+2+3+4+5+\ldots)$$
+
+Another moment to exclaim: We got back to $$S$$! Also, remember that we know $$S_2$$ to have the value $$\frac{1}{4}$$. Putting all things together, this yields
+
+$$!S-\frac{1}{4}=4S$$
+
+Exercising our rusty algebra a little, we finally arrive at
+
+$$!S=1+2+3+4+5+6+\ldots=-\frac{1}{12}.$$
+
+It may be madness, but there's a system behind it!
+
+Now, the trained mathematicians or other sceptical minds may have impatiently waited to destroy my little show by pointing out the obvious mistake in this chain of arguments. Strictly, that is <em>analytically</em>, speaking, none of these sums converge, so me treating them as numbers and manipulating the equations as though they were numbers indeed is pretty much cheating. But rearranging (infinite) sums <em>formally</em> and neglecting the question of convergence is a surprisingly powerful and useful tool. One particular master of this craft was Leonard Euler who by these means solved the famous <a href="http://en.wikipedia.org/wiki/Basel_problem" target="_blank">Basel problem</a>
+
+$$!\sum_{n\ge1}\frac{1}{n^2}=1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\frac{1}{25}+\ldots=\frac{\pi^2}{6}.$$
+
+This proves that sometimes the restraints of convergence are too tight and formal manipulations can lead to interesting and useful results. Indeed, Euler himself is credited ((This is somewhat <a href="http://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF#History" target="_blank">controversial</a>, but given his other work entirely possible.)) with finding the result that all natural numbers sum up to $$-\frac{1}{12}$$.
+
+This is all fair enough, but how is some formal manipulation relevant to the prime numbers and the rest of this blog? As always, it comes down to the $$\zeta$$-function. Remember the definition:
+
+$$!\zeta(s)=\sum_{n\ge1}n^{-s}.$$
+
+This converges for $$\Re s>1$$ and hence gives meaningful results only in this domain. But this is largely due to the singularity of $$\zeta(s)$$ at $$s=1$$ where the defining series boils down to the harmonic series. Let's forget convergence for a second, and just plug $$s=-1$$ into the definition of $$\zeta(s)$$. What we get is
+
+$$!\zeta(-1)=\sum_{n\ge1}n^{-(-1)}=1+2+3+4+5+\ldots$$
+
+I hope by now your excitement to rediscover our mystery sum has not eased up but intensified: $$\zeta(-1)=S$$. Euler couldn't get past the singularity in the $$\zeta$$-function as he only considered real values for $$s$$, but Riemann could! Extending the domain to complex numbers, he was able to circumvent the singularity and attach a meaningful value to $$\zeta(-1)$$. So now, it's time to go back to the <a href="http://www.riemannhypothesis.info/?p=93" title="Perfect Symmetry">functional equation</a>
+
+$$!\zeta(1-s)=2^{1-s}\pi^{-s}\cos(\pi s/2)\Pi(s-1)\zeta(s).$$
+
+Setting $$s=2$$, we obtain our ominous $$\zeta(-1)$$ on the left hand side. What do we get on the right? Well, $$2^{-1}\pi^{-2}$$ are just constants, $$\cos(\pi)$$ is $$-1$$, and $$\Pi(1)$$ is $$1! $$ or simply $$1$$. We're left with $$\zeta(2)$$ which happens to be the series over the reciprocals of all square numbers. Wait, didn't we see this just now? Yes, that's the famous Basel problem! What Euler calculated was nothing but the value of $$\zeta(2)$$. Combining all this, we arrive at
+
+$$!\zeta(-1)=\frac{1}{2}\cdot\pi^{-2}\cdot(-1)\cdot1\cdot\frac{\pi^2}{6}=-\frac{1}{12}.$$
+
+I'll give you a moment to breathe in the full beauty of mathematics.
+
+Done?
+
+We started out with a seemingly non-sense question about the sum of all natural numbers, came up with a downright insane answer, and ended up combining various deep results to give a real meaning to all this madness. Mathematics at its best.
+
+By the way, the "lunatic" who sent the letter to Hardy was no one less than Srinivasa Ramanujan who is now widely regarded as one of mathematics' greatest genii. Whoever remembers M. J. M. Hill?]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>200</wp:post_id>
+		<wp:post_date>2014-02-23 10:38:53</wp:post_date>
+		<wp:post_date_gmt>2014-02-23 10:38:53</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>infinity-is-worth-no-more-than-112</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="riemanns-paper"><![CDATA[Riemann's Paper]]></category>
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
