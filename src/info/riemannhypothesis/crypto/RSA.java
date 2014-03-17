@@ -30,7 +30,7 @@ public class RSA {
 		System.out.println("encrypted = " + encrypted.toString());
 		System.out.println("decrypted = " + decrypted.toString());
 
-		String newMessage = "ß∂˚ßƒ˙≈ç^π∑´®∆˚ßabcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz";
+		String newMessage = "abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz abcdefghijklmnopqrstuvxyz";
 		BigInteger[] newEncrypted = encryptMessage(newMessage, publicKey);
 		String newDecrypted = decryptString(newEncrypted, privateKey);
 
@@ -127,7 +127,7 @@ public class RSA {
 		BigInteger padded = BigInteger.ZERO;
 
 		for (int i = 0; i < message.length(); i++) {
-			int digit = (int) message.charAt(i);
+			int digit = message.charAt(i);
 			digit = (digit <= 0 || digit > 255) ? (int) '?' : digit;
 			padded = padded.shiftLeft(8).add(new BigInteger(Integer.toString(digit)));
 		}
