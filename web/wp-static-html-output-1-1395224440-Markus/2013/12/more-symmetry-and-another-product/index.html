@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<base href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com" />
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>More symmetry and Another Product | Understanding the Riemann Hypothesis</title>
+	
+	
+	<!--[if lt IE 9]>
+	<script src="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	
+
+
+<link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/style.css?ver=3.8.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/comment-reply.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+
+ 
+
+<link rel='next' title='Counting Primes Functionally' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/counting-primes-functionally/' />
+
+<link rel='canonical' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/more-symmetry-and-another-product/' />
+<link rel='shortlink' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/?p=153' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f5f5f5; }
+</style>
+</head>
+
+<body class="single single-post postid-153 single-format-standard custom-background masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/" rel="home">Understanding the Riemann Hypothesis</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<h1 class="menu-toggle">Primary Menu</h1>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div class="nav-menu"><ul><li class="page_item page-item-2"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/sample-page/">About</a></li><li class="page_item page-item-59"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/definitions-tools/">Definitions &#038; Tools</a></li><li class="page_item page-item-62 page_item_has_children"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/">Books</a><ul class='children'><li class="page_item page-item-70"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/books-on-the-riemann-hypothesis/">Books on the Riemann Hypothesis</a></li><li class="page_item page-item-72"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/books-on-mathematics-in-general/">Books on Mathematics in General</a></li><li class="page_item page-item-81"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/mathematicians-biographies/">Mathematicians' Biographies</a></li><li class="page_item page-item-83"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/mathematical-textbooks/">Mathematical Textbooks</a></li><li class="page_item page-item-74"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/other-books/">Other Books</a></li></ul></li></ul></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-153" class="post-153 post type-post status-publish format-standard hentry category-riemanns-paper tag-polynomial tag-product tag-symmetry tag-zeros">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/riemanns-paper/" title="View all posts in Riemann&#039;s Paper" rel="category tag">Riemann's Paper</a></span>
+		</div>
+		<h1 class="entry-title">More symmetry and Another Product</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/more-symmetry-and-another-product/" rel="bookmark"><time class="entry-date" datetime="2013-12-01T21:29:17+00:00">December 1, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/author/markus/" rel="author">Markus Schepke</a></span></span>			<span class="comments-link"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/more-symmetry-and-another-product/#respond" title="Comment on More symmetry and Another Product">Leave a comment</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>We've <a title="Perfect Symmetry" href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/?p=93">seen</a> that <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script> satisfies the functional equation</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_4f70a2965db95d12849cf5c9ee35d261.gif' style='vertical-align: middle; border: none;' class='tex' alt="\zeta(1-s)=2^{1-s}\pi^{-s}\cos(\pi s/2)\Pi(s-1)\zeta(s)." /></span><script type='math/tex;  mode=display'>\zeta(1-s)=2^{1-s}\pi^{-s}\cos(\pi s/2)\Pi(s-1)\zeta(s).</script></p></p>
+<p>(Well, it still needs to be proved, but let's just assume it's correct for now.) The goal of this post is an even more symmetrical form that will yield the function <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script> which we can develop into an incredibly useful product expression.</p>
+<p>On our wish list for <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script> we find three items:</p>
+<ol>
+<li>It's  an <em>entire function</em>, i.e., a function that's holomorphic everywhere in <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_55a258c7bacb00bc87783ca5086e8b91.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\mathbb{C}" /></span><script type='math/tex'>\mathbb{C}</script> without any poles.</li>
+<li>It has zeros for all non-trivial zeros of the <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_3c22ba7aade15ea2b2852cd51bb4d6d4.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta" /></span><script type='math/tex'>\zeta</script>-function, and no others.</li>
+<li>It's perfectly symmetrical along the critical line, i.e., it satisfies <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_34828e6aa242d1dd30fb0c98a00badfb.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(1-s)=\xi(s)" /></span><script type='math/tex'>\xi(1-s)=\xi(s)</script>.</li>
+</ol>
+<p><span id="more-153"></span><br />
+The first two requirements are fairly easy to satisfy. To make <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script> holomorphic, we just need to cancel out its single simple pole at <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_73bbe012edfb61eca43444d61fefe937.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="s=1" /></span><script type='math/tex'>s=1</script> by multiplying <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_a550ac820fd7768dd2468569ef985411.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="s-1" /></span><script type='math/tex'>s-1</script>. Keeping in mind the desired symmetry, we also multiply a factor <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_03c7c0ace395d80182db07ae2c30f034.gif' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="s" /></span><script type='math/tex'>s</script>. To get rid of the trivial zeros <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_996d07ffcaaca01f253b60b09d54ff85.gif' style='vertical-align: middle; border: none; ' class='tex' alt="s=-2,-4,-6,\ldots" /></span><script type='math/tex'>s=-2,-4,-6,\ldots</script>, plus the one we just introduced at <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_787d0b6e5d9e7525a7054c6f96c377ea.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="s=0" /></span><script type='math/tex'>s=0</script>, we need to multiply by a function that has (simple) poles at exactly these points, and no zeros. From the functional equation, we know that the factorial function <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_5f1d6a73ba9f495ec25bc5ca4f0d22e9.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\Pi(s)" /></span><script type='math/tex'>\Pi(s)</script> is a pretty good candidate, which has no zeros, but poles for <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_de20d3e64deeb3579bb77754859b84d6.gif' style='vertical-align: middle; border: none; ' class='tex' alt="s=-1,-2,-3,\ldots" /></span><script type='math/tex'>s=-1,-2,-3,\ldots</script>. So <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_4a13782428dbc283220ae393a7dca4f1.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\Pi(s/2)" /></span><script type='math/tex'>\Pi(s/2)</script> has poles at <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_996d07ffcaaca01f253b60b09d54ff85.gif' style='vertical-align: middle; border: none; ' class='tex' alt="s=-2,-4,-6,\ldots" /></span><script type='math/tex'>s=-2,-4,-6,\ldots</script>, and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f2ad85f74933759c78774153cf709cae.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\Pi(s/2-1)" /></span><script type='math/tex'>\Pi(s/2-1)</script> has poles at <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_fbdbf70af9d8cad1e2dca38ec9b084f2.gif' style='vertical-align: middle; border: none; ' class='tex' alt="s=0,-2,-4,\ldots" /></span><script type='math/tex'>s=0,-2,-4,\ldots</script>, perfectly covering all the zeros we needed eliminated without introducing new ones. This leads us to</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_1c2a8f00e0924ff8d6e611611b4435d1.gif' style='vertical-align: middle; border: none;' class='tex' alt="\xi(s)=\zeta(s)s(s-1)\Pi(s/2-1)\hat{\xi}(s)," /></span><script type='math/tex;  mode=display'>\xi(s)=\zeta(s)s(s-1)\Pi(s/2-1)\hat{\xi}(s),</script></p></p>
+<p>where <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_78a710cf2ef5b0c06b5593b177b98ab2.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\hat{\xi}(s)" /></span><script type='math/tex'>\hat{\xi}(s)</script> is just a placeholder for other factors that may be necessary achieve requirement 3, the symmetry around the critical line. We are free to choose anything for <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_78a710cf2ef5b0c06b5593b177b98ab2.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\hat{\xi}(s)" /></span><script type='math/tex'>\hat{\xi}(s)</script> as long as it does not interfere with the other two requirements, i.e., it cannot have zeros or poles. (Spoiler alert: Pretty much the only entire functions satisfying this are constant and exponential functions, and that's exactly what we will need.)</p>
+<p>I won't try to create any further tension as we're almost there (and I suck at it anyway). Indeed, Riemann found the integral expression</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_0595c77ae5f1a2910d1169f7e4e9990b.gif' style='vertical-align: middle; border: none;' class='tex' alt="\pi^{-s/2}\Pi(s/2-1)\zeta(s)=-\frac{1}{s(1-s)}+\int_1^\infty\left(x^{s/2-1}+x^{-s-1/2}\right)\psi(x)dx," /></span><script type='math/tex;  mode=display'>\pi^{-s/2}\Pi(s/2-1)\zeta(s)=-\frac{1}{s(1-s)}+\int_1^\infty\left(x^{s/2-1}+x^{-s-1/2}\right)\psi(x)dx,</script></p></p>
+<p>where</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_9ab7fad2e6db22f99ee56a136b5542e8.gif' style='vertical-align: middle; border: none;' class='tex' alt="\psi(x)=\sum_{n=1}^\infty e^{-\pi n^2 x}" /></span><script type='math/tex;  mode=display'>\psi(x)=\sum_{n=1}^\infty e^{-\pi n^2 x}</script></p></p>
+<p>is the exponential sum. I won't go into the details, but it is now obvious that the right-hand side is unchanged when you substitute <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_03c7c0ace395d80182db07ae2c30f034.gif' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="s" /></span><script type='math/tex'>s</script> by <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_bb7298cd12c0914fa2c0649db12a747d.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="1-s" /></span><script type='math/tex'>1-s</script>. In other words, if we define<sup id="rf1-153"><a href="#fn1-153"  title="The factor 1/2 has just been introduced to make certain calculations more convenient.">1</a></sup></p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_3d72d4fb49d62d3dd80791ecf913a216.gif' style='vertical-align: middle; border: none;' class='tex' alt="\xi(s)=\frac{1}{2}\pi^{-s/2}s(s-1)\Pi(s/2-1)\zeta(s)" /></span><script type='math/tex;  mode=display'>\xi(s)=\frac{1}{2}\pi^{-s/2}s(s-1)\Pi(s/2-1)\zeta(s)</script></p></p>
+<p>we have found a function that satisfies all three requirements. Eureka!</p>
+<p>So, why did we jump through all these hoops? I promised a nice product representation for <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script>, and we're now in the position to get cracking. More specifically, it's high time the zeros entered the scene!</p>
+<p>Representing a function through a product over their zeros is a pretty common idea. Take, for instance, a polynomial function <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_aac63bcf5efd117a9292731f83788017.gif' style='vertical-align: middle; border: none; ' class='tex' alt="p(s)" /></span><script type='math/tex'>p(s)</script> of degree, say, <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_8277e0910d750195b448797616e091ad.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="d" /></span><script type='math/tex'>d</script> with zeros <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f6cbfe06509f950122dce8cf6402af89.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\varrho_1,\ldots,\varrho_d" /></span><script type='math/tex'>\varrho_1,\ldots,\varrho_d</script>. (Of course we are all aware of the fundamental theorem of algebra which ensures that every polynomial of degree <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_8277e0910d750195b448797616e091ad.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="d" /></span><script type='math/tex'>d</script> has exactly <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_8277e0910d750195b448797616e091ad.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="d" /></span><script type='math/tex'>d</script> zeros over the complex numbers, right?) Now, consider the expression</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_064557164fc6d715467ff3bc9b9cd7ea.gif' style='vertical-align: middle; border: none;' class='tex' alt="\hat{p}(s)=p(0)\prod_{n=1}^d\left(1-\frac{s}{\varrho_n}\right)." /></span><script type='math/tex;  mode=display'>\hat{p}(s)=p(0)\prod_{n=1}^d\left(1-\frac{s}{\varrho_n}\right).</script></p></p>
+<p>For <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_787d0b6e5d9e7525a7054c6f96c377ea.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="s=0" /></span><script type='math/tex'>s=0</script>, all factors are <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_c4ca4238a0b923820dcc509a6f75849b.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="1" /></span><script type='math/tex'>1</script>, so <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_7fc55dd89d09b09f1d03963ab922cb27.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\hat{p}(0)=p(0)" /></span><script type='math/tex'>\hat{p}(0)=p(0)</script>. Further, if <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_6eaa87a15cd9b12b985cfb86ff5555db.gif' style='vertical-align: middle; border: none; ' class='tex' alt="s=\varrho_i" /></span><script type='math/tex'>s=\varrho_i</script>, i.e., one of the zeros, then the corresponding factor is <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_cfcd208495d565ef66e7dff9f98764da.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="0" /></span><script type='math/tex'>0</script>, and hence the whole product, as is the polynomial at this point, so <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_55c379e5236b8da2df8923ad7f763bfe.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\hat{p}(\varrho_i)=p(\varrho_i)" /></span><script type='math/tex'>\hat{p}(\varrho_i)=p(\varrho_i)</script>. Now, we found an expression that corresponds to our polynomial in <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_765f09f9b6abc99f555c131a5475b9db.gif' style='vertical-align: middle; border: none; ' class='tex' alt="d+1" /></span><script type='math/tex'>d+1</script> points (the <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_8277e0910d750195b448797616e091ad.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="d" /></span><script type='math/tex'>d</script> zeros and the origin). Since the polynomial has <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_765f09f9b6abc99f555c131a5475b9db.gif' style='vertical-align: middle; border: none; ' class='tex' alt="d+1" /></span><script type='math/tex'>d+1</script> degrees of freedom (the <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_765f09f9b6abc99f555c131a5475b9db.gif' style='vertical-align: middle; border: none; ' class='tex' alt="d+1" /></span><script type='math/tex'>d+1</script> coefficients of the polynomial), it is completely determined by these points, and hence must correspond to our expression: <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_e888e9780b339f6299d21d66559decc2.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\hat{p}(s)=p(s)" /></span><script type='math/tex'>\hat{p}(s)=p(s)</script> for all <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_03c7c0ace395d80182db07ae2c30f034.gif' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="s" /></span><script type='math/tex'>s</script>. (In all I've just said I implicitly assumed the zeros to be simple, and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_b07fe2d94f9e8b920d28b87df7a7636c.gif' style='vertical-align: middle; border: none; ' class='tex' alt="p(0)\neq0" /></span><script type='math/tex'>p(0)\neq0</script>, but these are just technical obstacles.)</p>
+<p>Why shouldn't the same hold for infinitely many zeros? Holomorphic function are really just polynomials of infinite degree, so we would expect an expression like</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_a0d6be66f24b5ce6a1534fbc2ac05f14.gif' style='vertical-align: middle; border: none;' class='tex' alt="\xi(s)=\xi(0)\prod_\varrho\left(1-\frac{s}{\varrho}\right)," /></span><script type='math/tex;  mode=display'>\xi(s)=\xi(0)\prod_\varrho\left(1-\frac{s}{\varrho}\right),</script></p></p>
+<p>where the product runs over all the zeros of <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script> which, by our construction, are exactly the non-trivial zeros of <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script>. Of course, this argumentation is all very vague, and for the above expression to be correct, we at the very least need convergence of the product. As an additional obstacle, the product converges only converges conditionally, i.e., the convergence depends on the ordering of the zeros. It turns out the "right" ordering is to pair every zero <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_b61719e4483d24b6b51917d6c1d2bb14.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="\varrho" /></span><script type='math/tex'>\varrho</script> with the mirrored <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_bbb863913bec8046c7e4bd86225e8157.gif' style='vertical-align: middle; border: none; ' class='tex' alt="1-\varrho" /></span><script type='math/tex'>1-\varrho</script>. Recalling what we learnt <a title="Does the Euler Product Converge?" href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/?p=45">earlier</a>, it suffices then to prove that <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_447fa1bc3dec1c21ded060c4735f6848.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\sum_{\Im\varrho>0}1/|\varrho(1-\varrho)|" /></span><script type='math/tex'>\sum_{\Im\varrho>0}1/|\varrho(1-\varrho)|</script> converges.</p>
+<p>Riemann states in his paper (though he makes no attempt to prove it, so neither shall I feel under any obligation to do so) that the number of zeros of <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script> (or <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script>, if you prefer) in the critical strip with imaginary part between <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_cfcd208495d565ef66e7dff9f98764da.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="0" /></span><script type='math/tex'>0</script> and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_b9ece18c950afbfa6b0fdbfa4ff731d3.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="T" /></span><script type='math/tex'>T</script> is approximately</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_97620572be14ee06c7d8c9417acdffa1.gif' style='vertical-align: middle; border: none;' class='tex' alt="\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}." /></span><script type='math/tex;  mode=display'>\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}.</script></p></p>
+<p>This implies, very roughly, that the <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_7b8b965ad4bca0e41ab51de7b31363a1.gif' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="n" /></span><script type='math/tex'>n</script>th zero has modulus about <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_38b3cce9e6689c72f6606c2ce0f3c879.gif' style='vertical-align: middle; border: none; ' class='tex' alt="n/\log n" /></span><script type='math/tex'>n/\log n</script>, so the above sum behaves similar to <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_a57d2ec5884644fe9279ac2309c9e4ff.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\sum(\log n)^2/n^2" /></span><script type='math/tex'>\sum(\log n)^2/n^2</script> which indeed converges, and hence the product does.</p>
+<p>There's a lot of hand-waving and unproved arguments in this article, some of which we may return to, some which we just leave as it is. But one conclusion will hopefully stick: We have the functions <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script> and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_f3a761cd56a9193ecefdec155ab9eecc.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\xi(s)" /></span><script type='math/tex'>\xi(s)</script> (which are essentially the same for all we are concerned about), and represented them as two products, one over the prime numbers, and one over the zeros in the critical strip. This intrinsically links these two together! We will go on to use the zeros to calculate primes, both approximately and exactly.</p>
+<hr class="footnotes"><ol class="footnotes"><li id="fn1-153"><p>The factor 1/2 has just been introduced to make certain calculations more convenient.&nbsp;<a href="#rf1-153" class="backlink" title="Jump back to footnote 1 in the text.">&#8617;</a></p></li></ol>	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/polynomial/" rel="tag">Polynomial</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/product/" rel="tag">Product</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/symmetry/" rel="tag">Symmetry</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/zeros/" rel="tag">Zeros</a></span></footer></article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/11/are-primes-independent/" rel="prev"><span class="meta-nav">Previous Post</span>Are Primes Independent?</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/counting-primes-functionally/" rel="next"><span class="meta-nav">Next Post</span>Counting Primes Functionally</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="comments" class="comments-area">
+
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/12/more-symmetry-and-another-product/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='153' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="26c7e44c2b" /></p>					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Everything You Always Wanted to Know About Primes (But Were Afraid to Ask)</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/02/infinity-is-worth-no-more-than-112/">Infinity Is Worth No More Than -1/12</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/counting-primes-functionally/">Counting Primes Functionally</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/more-symmetry-and-another-product/">More symmetry and Another Product</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/11/are-primes-independent/">Are Primes Independent?</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/perfect-symmetry/">Perfect Symmetry</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-185">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-149">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-129">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments"><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com' rel='external nofollow' class='url'>Markus Schepke</a> on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-127">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-100">In the Beginning, There Was... Euler's Formula!</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+			<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/02/'>February 2014</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/'>January 2014</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/'>December 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/11/'>November 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/'>October 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/'>September 2013</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/euler-product/" title="View all posts filed under Euler product">Euler product</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/functional-equation/" title="View all posts filed under Functional Equation">Functional Equation</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/probability/" title="View all posts filed under Probability">Probability</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/riemanns-paper/" title="View all posts filed under Riemann&#039;s Paper">Riemann&#039;s Paper</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+						<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-login.php">Log in</a></li>
+			<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						</ul>
+</aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({ 
+                TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}}, 
+                "HTML-CSS": {linebreaks: {automatic: true}}, 
+                SVG: {linebreaks: {automatic: true}}
+        }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script><script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/js/functions.js?ver=20131209'></script>
+</body>
+</html>

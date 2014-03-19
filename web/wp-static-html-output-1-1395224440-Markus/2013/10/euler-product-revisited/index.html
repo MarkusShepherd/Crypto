@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<base href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com" />
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Euler Product Revisited | Understanding the Riemann Hypothesis</title>
+	
+	
+	<!--[if lt IE 9]>
+	<script src="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	
+
+
+<link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/style.css?ver=3.8.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/comment-reply.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+
+ 
+
+<link rel='next' title='Does the Euler Product Converge?' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/does-the-euler-product-converge/' />
+
+<link rel='canonical' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/euler-product-revisited/' />
+<link rel='shortlink' href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/?p=33' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f5f5f5; }
+</style>
+</head>
+
+<body class="single single-post postid-33 single-format-standard custom-background masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/" rel="home">Understanding the Riemann Hypothesis</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<h1 class="menu-toggle">Primary Menu</h1>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div class="nav-menu"><ul><li class="page_item page-item-2"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/sample-page/">About</a></li><li class="page_item page-item-59"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/definitions-tools/">Definitions &#038; Tools</a></li><li class="page_item page-item-62 page_item_has_children"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/">Books</a><ul class='children'><li class="page_item page-item-70"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/books-on-the-riemann-hypothesis/">Books on the Riemann Hypothesis</a></li><li class="page_item page-item-72"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/books-on-mathematics-in-general/">Books on Mathematics in General</a></li><li class="page_item page-item-81"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/mathematicians-biographies/">Mathematicians' Biographies</a></li><li class="page_item page-item-83"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/mathematical-textbooks/">Mathematical Textbooks</a></li><li class="page_item page-item-74"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/books/other-books/">Other Books</a></li></ul></li></ul></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-33" class="post-33 post type-post status-publish format-standard hentry category-euler-product tag-euler tag-product tag-series">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/euler-product/" title="View all posts in Euler product" rel="category tag">Euler product</a></span>
+		</div>
+		<h1 class="entry-title">Euler Product Revisited</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/euler-product-revisited/" rel="bookmark"><time class="entry-date" datetime="2013-10-06T23:24:34+00:00">October 6, 2013</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/author/markus/" rel="author">Markus Schepke</a></span></span>			<span class="comments-link"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/euler-product-revisited/#respond" title="Comment on Euler Product Revisited">Leave a comment</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>From the <a title="In the Beginning, There Was... Euler's Formula!" href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/?p=11">previous</a> post we know that the harmless looking series <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_19a97ba2e107df01d3324f0e09e8860f.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\sum n^{-s}" /></span><script type='math/tex'>\sum n^{-s}</script> can be extended to the product <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_97000f7ee0408847984e6a295388897d.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\prod (1-p^{-s})^{-1}" /></span><script type='math/tex'>\prod (1-p^{-s})^{-1}</script>. At first sight, this does not seem terribly helpful, and it actually makes the rather easy series more complicated. So what's the big deal?</p>
+<p>It's what has actually been suppressed in the above notation: The sequences we run through. The series runs over all natural numbers (or positive integers, if you prefer), the product runs through all prime numbers. Now, that's cool, isn't it? We found a series over the natural numbers that, as we will see later, defines a well-behaved function which is accessible to all the nice methods modern mathematics can offer, and related it to the prime numbers.</p>
+<p>In other words: Riemann's <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_3c22ba7aade15ea2b2852cd51bb4d6d4.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta" /></span><script type='math/tex'>\zeta</script>-function encodes the mysteries of the primes.<span id="more-33"></span></p>
+<p>If you are still not convinced, just remember the following: Primes have been studied for two millennia<sup id="rf1-33"><a href="#fn1-33"  title="citation needed">1</a></sup> and rather little was (and still is) known. They are defined in the simplest terms, and the smartest minds have dealt with them, yet still they seemed to remain an invulnerable fortress. Now and again, one of these smart minds has got a glimpse through a window, but no more. It's presumptuous to claim that Riemann has conquered the fortress, but at least he has found a way how to assault it. Proving the Riemann Hypothesis would mean executing the final blow and taking residence in the prime fortress.</p>
+<p>But back to the Euler product. The proof using the sieve of Eratosthenes dates back to Euler himself and couldn't be clearer and more insightful. Still, I'd like to take a look at a more technical proof, partly because it is a great practice in dealing with sums, partly because the Euler product is so immensely important that it's worth dwelling a little on it.</p>
+<p>The careful reader will observe that plugging <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_73bbe012edfb61eca43444d61fefe937.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="s=1" /></span><script type='math/tex'>s=1</script> into <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_82a19a183ea387e48e91dbd98d8c989b.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta(s)" /></span><script type='math/tex'>\zeta(s)</script> yields <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_8fdc675cab14fa8d6fd72dd80a767475.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\sum 1/n" /></span><script type='math/tex'>\sum 1/n</script> which is known as the <a href="http://en.wikipedia.org/wiki/Harmonic_series_(mathematics)" target="_blank">harmonic series</a>, one of the most fundamental series in mathematics, and usually the first example of a divergent series. The second proof makes use of the second of the three most important series in mathematics (the other one being the <a href="http://en.wikipedia.org/wiki/Exponential_function" target="_blank">exponential series</a>, with an honorary mention of the <a href="http://en.wikipedia.org/wiki/Dirichlet_series" target="_blank">Dirichlet series</a> as the Riemann <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_3c22ba7aade15ea2b2852cd51bb4d6d4.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\zeta" /></span><script type='math/tex'>\zeta</script>-function is a special case of it). So, we need to remember the formula for the <a href="http://en.wikipedia.org/wiki/Geometric_series" target="_blank">geometric series</a>:</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_ed771029ff906c3008f1d7ada240fbd4.gif' style='vertical-align: middle; border: none;' class='tex' alt="\sum_{n\ge0}\alpha^n=(1-\alpha)^{-1}," /></span><script type='math/tex;  mode=display'>\sum_{n\ge0}\alpha^n=(1-\alpha)^{-1},</script></p></p>
+<p>where <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_a1c2ce42ff27983965d1d690d742615a.gif' style='vertical-align: middle; border: none; ' class='tex' alt="|\alpha|<1" /></span><script type='math/tex'>|\alpha|<1</script>. Now, as long as <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_aac7aa6fd4216f20d11bec700bdf5749.gif' style='vertical-align: middle; border: none; ' class='tex' alt="\Re s>1" /></span><script type='math/tex'>\Re s>1</script>, we have <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_21c1bdf46062167276721803f8e4de04.gif' style='vertical-align: middle; border: none; ' class='tex' alt="|p^{-s}|<1" /></span><script type='math/tex'>|p^{-s}|<1</script> for any prime <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_83878c91171338902e0fe0fb97a8c47a.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="p" /></span><script type='math/tex'>p</script>, so can expand the Euler product (yes, we kind of move backwards) to</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_52efe955d440e4a4a4eeba1fc06c99e4.gif' style='vertical-align: middle; border: none;' class='tex' alt="\prod_p (1-p^{-s})^{-1}=\prod_p\sum_{n\ge0}p^{-ns}." /></span><script type='math/tex;  mode=display'>\prod_p (1-p^{-s})^{-1}=\prod_p\sum_{n\ge0}p^{-ns}.</script></p></p>
+<p>Again, instead of an infinite product, we now have an infinite product of infinite series --  doesn't look easier at all. But let's just write out a few of these terms:</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_15108704cf04f0e690d30ace96d166bb.gif' style='vertical-align: middle; border: none;' class='tex' alt="(1^{-s}+2^{-s}+2^{-2s}+2^{-3s}+\ldots)(1^{-s}+3^{-s}+3^{-2s}+3^{-3s}+\ldots)(1^{-s}+5^{-s}+5^{-2s}+5^{-3s}+\ldots)(1^{-s}+7^{-s}+7^{-2s}+7^{-3s}+\ldots)\cdots" /></span><script type='math/tex;  mode=display'>(1^{-s}+2^{-s}+2^{-2s}+2^{-3s}+\ldots)(1^{-s}+3^{-s}+3^{-2s}+3^{-3s}+\ldots)(1^{-s}+5^{-s}+5^{-2s}+5^{-3s}+\ldots)(1^{-s}+7^{-s}+7^{-2s}+7^{-3s}+\ldots)\cdots</script></p></p>
+<p>Expanding the product just means picking one summand from each factor at a time, and then sum up all the possible combinations. If I always pick the first summand, I certainly get</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_29904ebc2f10b87529337984e3867bf8.gif' style='vertical-align: middle; border: none;' class='tex' alt="1^{-s}\cdot1^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=1^{-s}=1." /></span><script type='math/tex;  mode=display'>1^{-s}\cdot1^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=1^{-s}=1.</script></p></p>
+<p>OK, not too spectacular. Now, we pick the second summand of the first factor, and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_c4ca4238a0b923820dcc509a6f75849b.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="1" /></span><script type='math/tex'>1</script> everywhere else. This yields</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_995e3affd6bc5a92c411c00d2b9e41f9.gif' style='vertical-align: middle; border: none;' class='tex' alt="2^{-s}\cdot1^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=2^{-s}." /></span><script type='math/tex;  mode=display'>2^{-s}\cdot1^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=2^{-s}.</script></p></p>
+<p>I think it is clear enough that I can obtain in similar ways a summand <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_0a3016839173a5802586efe4e2dd3d25.gif' style='vertical-align: middle; border: none; ' class='tex' alt="p^{-s}" /></span><script type='math/tex'>p^{-s}</script> for every prime <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_83878c91171338902e0fe0fb97a8c47a.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="p" /></span><script type='math/tex'>p</script> by picking the second summand of the respective factor, and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_c4ca4238a0b923820dcc509a6f75849b.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="1" /></span><script type='math/tex'>1</script> otherwise. What else would I get? Can I get, say, <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_68f999cbea59b0bb3b01152928b4e50f.gif' style='vertical-align: middle; border: none; ' class='tex' alt="12^{-s}" /></span><script type='math/tex'>12^{-s}</script>. Sure I can! I just pick the third summand of the first factor and the second summand of the second factor, and <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_c4ca4238a0b923820dcc509a6f75849b.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="1" /></span><script type='math/tex'>1</script> otherwise. We get</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_4e49109e87d1794e859a9d23f741b96f.gif' style='vertical-align: middle; border: none;' class='tex' alt="2^{-2s}\cdot3^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=(2^2\cdot3)^{-s}=12^{-s}." /></span><script type='math/tex;  mode=display'>2^{-2s}\cdot3^{-s}\cdot1^{-s}\cdot1^{-s}\cdots=(2^2\cdot3)^{-s}=12^{-s}.</script></p></p>
+<p>I hope by now it is clear that we will get this way a summand <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_e129757d575b978841cace34bfd51503.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="n^{-s}" /></span><script type='math/tex'>n^{-s}</script> for every natural number <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_7b8b965ad4bca0e41ab51de7b31363a1.gif' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="n" /></span><script type='math/tex'>n</script> when expending the product. On the other hand, the <a href="http://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic" target="_blank">fundamental theorem of arithmetic</a> asserts that each natural number has a unique factorisation into prime powers, which means in our case that we will have each summand <span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_e129757d575b978841cace34bfd51503.gif' style='vertical-align: middle; border: none; padding-bottom:1px;' class='tex' alt="n^{-s}" /></span><script type='math/tex'>n^{-s}</script> once <em>and once only</em>. Hence we can conclude</p>
+<p><p style='text-align:center;'><span class='MathJax_Preview'><img src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/plugins/latex/cache/tex_d4d884097ef1649bf62e2bc7de0c230b.gif' style='vertical-align: middle; border: none;' class='tex' alt="\prod_p (1-p^{-s})^{-1}=\prod_p\sum_{n\ge1}p^{-ns}=\sum_{n\ge1}n^{-s}," /></span><script type='math/tex;  mode=display'>\prod_p (1-p^{-s})^{-1}=\prod_p\sum_{n\ge1}p^{-ns}=\sum_{n\ge1}n^{-s},</script></p></p>
+<p>which we knew all along, but have now proved in a different way. Before, I claimed that the Euler product would encode the prime mystery, now I can claim that it encodes the fundamental theorem of arithmetic -- which is cool, since this theorem really is the reason why we got into primes in the first place.</p>
+<hr class="footnotes"><ol class="footnotes"><li id="fn1-33"><p>citation needed&nbsp;<a href="#rf1-33" class="backlink" title="Jump back to footnote 1 in the text.">&#8617;</a></p></li></ol>	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/euler/" rel="tag">Euler</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/product/" rel="tag">Product</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/tag/series/" rel="tag">Series</a></span></footer></article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/" rel="prev"><span class="meta-nav">Previous Post</span>In the Beginning, There Was... Euler's Formula!</a><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/does-the-euler-product-converge/" rel="next"><span class="meta-nav">Next Post</span>Does the Euler Product Converge?</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="comments" class="comments-area">
+
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/10/euler-product-revisited/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='33' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="97ef4221b9" /></p>					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Everything You Always Wanted to Know About Primes (But Were Afraid to Ask)</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/02/infinity-is-worth-no-more-than-112/">Infinity Is Worth No More Than -1/12</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/counting-primes-functionally/">Counting Primes Functionally</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/more-symmetry-and-another-product/">More symmetry and Another Product</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/11/are-primes-independent/">Are Primes Independent?</a>
+						</li>
+					<li>
+				<a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/perfect-symmetry/">Perfect Symmetry</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-185">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-149">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-129">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments"><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com' rel='external nofollow' class='url'>Markus Schepke</a> on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-127">In the Beginning, There Was... Euler's Formula!</a></li><li class="recentcomments">Peter L. Griffiths on <a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/in-the-beginning-there-was-eulers-formula/comment-page-1/#comment-100">In the Beginning, There Was... Euler's Formula!</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+			<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/02/'>February 2014</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2014/01/'>January 2014</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/12/'>December 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/11/'>November 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/10/'>October 2013</a></li>
+	<li><a href='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/2013/09/'>September 2013</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/euler-product/" title="View all posts filed under Euler product">Euler product</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/functional-equation/" title="View all posts filed under Functional Equation">Functional Equation</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/probability/" title="View all posts filed under Probability">Probability</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/category/riemanns-paper/" title="View all posts filed under Riemann&#039;s Paper">Riemann&#039;s Paper</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+						<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-login.php">Log in</a></li>
+			<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>						</ul>
+</aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({ 
+                TeX: {equationNumbers: {autoNumber: ["AMS"], useLabelIds: true}}, 
+                "HTML-CSS": {linebreaks: {automatic: true}}, 
+                SVG: {linebreaks: {automatic: true}}
+        }); 
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+</script><script type='text/javascript' src='http://static.riemannhypothesis.info.s3-website-eu-west-1.amazonaws.com/wp-content/themes/twentyfourteen/js/functions.js?ver=20131209'></script>
+</body>
+</html>
