@@ -1,9 +1,10 @@
 package info.riemannhypothesis.crypto.tools;
 
+import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
-public class ByteSequence implements Cloneable {
+public class ByteSequence implements Cloneable, Comparable<ByteSequence> {
 
 	public static final Charset DEFAULT_CHARSET = Charset.defaultCharset();
 	public static final ByteSequence EMPTY_SEQUENCE = new ByteSequence(
@@ -29,6 +30,14 @@ public class ByteSequence implements Cloneable {
 
 	public byte byteAt(int pos) {
 		return this.seq[pos];
+	}
+
+	public int intAt(int pos) {
+	        int temp = seq[pos];
+	        while (temp < 0) {
+	            temp += 256;
+	        }
+	        return temp;
 	}
 
 	public int length() {
@@ -111,43 +120,45 @@ public class ByteSequence implements Cloneable {
 	}
 
 	public String toHexString() {
-		return this.toHexString(null);
+		return this.toNumString(16, 2, null);
 	}
 
 	public String toHexString(String sep) {
-		boolean insertSep = true;
-		if (sep == null || sep.length() == 0) {
-			insertSep = false;
-		}
-		StringBuilder temp = new StringBuilder(seq.length);
-		for (int i = 0; i < seq.length; i++) {
-			int b = seq[i];
-			while (b < 0) {
-				b += 256;
-			}
-			if (b < 16) {
-				temp.append('0');
-			}
-			temp.append(Integer.toHexString(b));
-			if (insertSep && i < seq.length - 1) {
-				temp.append(sep);
-			}
-		}
-		return temp.toString();
+	        return this.toNumString(16, 2, sep);
 	}
+	
+        public String toNumString(int base) {
+            return toNumString(base, charPerByte(base), null);
+        }
 
-	public static ByteSequence fromNumString(String input, int base) {
-		int charPerByte = 2;
-		if (base <= 2) {
-			charPerByte = 8;
-		} else if (base <= 3) {
-			charPerByte = 6;
-		} else if (base <= 6) {
-			charPerByte = 4;
-		} else if (base <= 15) {
-			charPerByte = 3;
-		}
-		return fromNumString(input, base, charPerByte);
+        public String toNumString(int base, int charPerByte) {
+            return toNumString(base, charPerByte, null);
+        }
+
+        public String toNumString(int base, String sep) {
+            return toNumString(base, charPerByte(base), sep);
+        }
+
+	public String toNumString(int base, int charPerByte, String sep) {
+            boolean insertSep = sep != null && sep.length() > 0;
+            StringBuilder temp = new StringBuilder(seq.length);
+            for (int i = 0; i < seq.length; i++) {
+                    StringBuilder c = new StringBuilder(charPerByte);
+                    int b = intAt(i);
+                    for (int d = 0; d < charPerByte; d++) {
+                        c.append(Integer.toString(b % base, base));
+                        b = b / base;
+                    }
+                    temp.append(c.reverse());
+                    if (insertSep && i < seq.length - 1) {
+                            temp.append(sep);
+                    }
+            }
+            return temp.toString();
+        }
+
+        public static ByteSequence fromNumString(String input, int base) {
+		return fromNumString(input, base, charPerByte(base));
 	}
 
 	public static ByteSequence fromNumString(String input, int base,
@@ -178,8 +189,91 @@ public class ByteSequence implements Cloneable {
 		return fromNumString(input, 16, 2);
 	}
 
+        public static ByteSequence fromInt(int that, int length) {
+            final int l = Math.max(length, 4);
+            ByteBuffer bb = ByteBuffer.allocate(l);
+            bb.position(l - 4);
+            return new ByteSequence(bb.putInt(that).array());
+                    //putInt(that).array());
+        }
+
+        public static ByteSequence fromLong(long that, int length) {
+            final int l = Math.max(length, 8);
+            ByteBuffer bb = ByteBuffer.allocate(l);
+            bb.position(l - 8);
+            return new ByteSequence(bb.putLong(that).array());
+                    //putInt(that).array());
+        }
+
 	@Override
 	public ByteSequence clone() throws CloneNotSupportedException {
 		return new ByteSequence(Arrays.copyOf(seq, seq.length));
 	}
+
+	@Override
+	public final boolean equals(Object obj) {
+	    if (this == obj) {
+	        return true;
+	    }
+	    if (!(obj instanceof ByteSequence)) {
+	        return false;
+	    }
+	    ByteSequence that = (ByteSequence) obj;
+	    return Arrays.equals(this.seq, that.seq);
+	}
+
+        @Override
+        public int compareTo(ByteSequence that) {
+            for (int i = 0; i < Math.min(this.length(), that.length()); i++) {
+                int diff = this.intAt(i) - that.intAt(i);
+                if (diff != 0) {
+                    return diff;
+                }
+            }
+            return this.length() - that.length();
+        }
+
+        @Override
+        public int hashCode() {
+            ByteBuffer bb = ByteBuffer.wrap(seq);
+            int hash = 0;
+            while (bb.position() <= bb.capacity() - 4) {
+                hash ^= bb.getInt();
+            }
+            while (bb.position() <= bb.capacity() - 2) {
+                hash ^= bb.getShort();
+            }
+            while (bb.position() <= bb.capacity() - 1) {
+                hash ^= bb.get();
+            }
+            return hash;
+        }
+
+	private static int charPerByte(int base) {
+            int charPerByte = 2;
+            if (base <= 2) {
+                charPerByte = 8;
+            } else if (base <= 3) {
+                charPerByte = 6;
+            } else if (base <= 6) {
+                charPerByte = 4;
+            } else if (base <= 15) {
+                charPerByte = 3;
+            }
+            return charPerByte;
+        }
+
+        public static void main(String[] args) {
+            ByteSequence bs1 = ByteSequence.fromInt((int)(Math.random()*Integer.MAX_VALUE), 0);
+            ByteSequence bs2 = ByteSequence.fromLong(0xFFFFFFFFFFL, 8);
+            System.out.println(bs1.toNumString(2, 8, " "));
+            System.out.println(bs1.toNumString(8, 8, " "));
+            System.out.println(bs1.toNumString(10, 8, " "));
+            System.out.println(bs1.toNumString(16, 8, " "));
+            System.out.println(bs2.toNumString(2, 8, " "));
+            System.out.println(bs1.hashCode());
+            System.out.println(bs2.hashCode());
+            System.out.println(bs2.compareTo(bs1));
+            
+        }
 }
