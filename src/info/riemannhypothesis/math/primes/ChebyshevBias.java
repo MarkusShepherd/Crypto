@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -73,6 +72,22 @@ public class ChebyshevBias {
         return result;
     }
 
+    public static double[] percent(double[] bias) {
+        double total = 0;
+
+        for (double t : bias) {
+            total += t;
+        }
+
+        double[] result = new double[bias.length];
+
+        for (int i = 0; i < bias.length; i++) {
+            result[i] = bias[i] / total;
+        }
+
+        return result;
+    }
+
     /**
      * @param args
      */
@@ -90,9 +105,49 @@ public class ChebyshevBias {
             e.printStackTrace();
             return;
         }
+        
+        System.out.println("Ready. Type a modulus and hit return:");
 
-        int mod = Integer.parseInt(args[1], 10);
-        System.out.println(Arrays.toString(cb.bias(mod)));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String line;
+
+        try {
+            while ((line = br.readLine()) != null) {
+
+                line = line.trim();
+                int mod;
+                try {
+                    mod = Integer.parseInt(line, 10);
+                } catch (NumberFormatException e) {
+                    return;
+                }
+
+                final double[] bias = cb.bias(mod);
+
+                // System.out.println(Arrays.toString(bias));
+                // System.out.println(Arrays.toString(percent(bias)));
+
+                for (int i = 0; i < bias.length; i++) {
+                    if (gcd(mod, i) == 1) {
+                        System.out.format("Mod %3d: %8.4f%%%n", i,
+                                percent(bias)[i] * 100);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
     }
 
+    public static int gcd(int a, int b) {
+        if (b > a) {
+            return gcd(b, a);
+        } else if (b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b);
+        }
+    }
 }
