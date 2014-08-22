@@ -28,6 +28,14 @@ public class ByteSequence implements Cloneable, Comparable<ByteSequence> {
         return seq;
     }
 
+    public boolean booleanAt(int pos) {
+        return ((1 << (7 - (pos % 8))) & seq[pos / 8]) != 0;
+    }
+
+    public byte bitAt(int pos) {
+        return (byte) (booleanAt(pos) ? 1 : 0);
+    }
+
     public byte byteAt(int pos) {
         return this.seq[pos];
     }
@@ -141,6 +149,34 @@ public class ByteSequence implements Cloneable, Comparable<ByteSequence> {
 
     public ByteSequence range(int from, int to) {
         return new ByteSequence(Arrays.copyOfRange(seq, from, to));
+    }
+
+    public int bitRange(int from, int to) {
+        if (to < from) {
+            throw new IllegalArgumentException();
+        }
+        int result = 0;
+        int pos = from / 8;
+        int length = to - from;
+        int c = 0;
+
+        while (from >= 8) {
+            from -= 8;
+            to -= 8;
+        }
+
+        while (length > 0) {
+            byte temp = seq[pos + c];
+            for (int i = (from % 8); i < Math.min(to, 8); i++) {
+                result |= (((1 << (7 - i)) & temp) >> (7 - i)) << (length - 1);
+                length--;
+            }
+            from = 0;
+            to -= 8;
+            c++;
+        }
+
+        return result;
     }
 
     @Override
@@ -299,7 +335,7 @@ public class ByteSequence implements Cloneable, Comparable<ByteSequence> {
     public static void main(String[] args) {
         ByteSequence bs1 = ByteSequence.fromInt(
                 (int) (Math.random() * Integer.MAX_VALUE), 0);
-        ByteSequence bs2 = ByteSequence.fromLong(0xFFFFFFFFFFL, 8);
+        ByteSequence bs2 = ByteSequence.fromInt(0xFFFFFFFF, 4);
         System.out.println(bs1.toNumString(2, 8, " "));
         System.out.println(bs1.toNumString(8, 8, " "));
         System.out.println(bs1.toNumString(10, 8, " "));
@@ -313,5 +349,12 @@ public class ByteSequence implements Cloneable, Comparable<ByteSequence> {
         System.out.println(bs2.add((byte) -1).toNumString(2, 8, " "));
         System.out.println(bs2.add((byte) 100).toNumString(2, 8, " "));
 
+        System.out.println(bs1.toNumString(2, " "));
+        System.out.println(Integer.toBinaryString(bs1.bitRange(16, 32)));
+
+        System.out.println(bs1.toNumString(2, " "));
+        for (int i = 0; i < bs1.length() * 8; i++) {
+            System.out.println("" + i + ": " + bs1.bitAt(i));
+        }
     }
 }
